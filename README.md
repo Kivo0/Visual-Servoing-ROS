@@ -1,6 +1,6 @@
 # Visual-Servoing-ROS
-## Main Contributors: MIKHAILOV Ivan, BOTROS Karim
-Contributor: Some guy named Hussain, not sure though
+## Main Contributors: MIKHAILOV Ivan, BOTROS Karim, SAEED Hassan
+
 
 ## Table of Content:
 
