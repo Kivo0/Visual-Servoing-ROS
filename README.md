@@ -4,9 +4,9 @@ Contributor: Some guy named Hussain, not sure though
 
 ## Table of Content:
 
-[Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project-Description)
-[Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#ii-Turtlebot-Navigation)
-[Basic Commands for Launch](
+I. [Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project-Description)
+II. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#ii-Turtlebot-Navigation)
+[Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic Commands)
 
 
 
@@ -23,8 +23,8 @@ the some other guy should write here !!!!!!!! not on microsoft Word!!!!!
 
 
 
-   Basic Commands
-   --------------
+## Basic Commands
+   ---------------
 
 ### Create 4 SSH: ###
 
