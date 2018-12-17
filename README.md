@@ -7,7 +7,7 @@ Contributor: Some guy named Hussain, not sure though
 I. [Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project-Description)
 
 II. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#ii-Turtlebot-Navigation)
-   *[Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
+   * [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
 
 
 
