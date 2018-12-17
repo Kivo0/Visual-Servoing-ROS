@@ -4,11 +4,11 @@ Contributor: Some guy named Hussain, not sure though
 
 ## Table of Content:
 
-[Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project Description)
+[Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project-Description)
 
 
 I. Project Description
-______________________
+    ___________________
 
 here is the description
 
