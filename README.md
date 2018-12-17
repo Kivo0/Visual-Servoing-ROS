@@ -60,8 +60,8 @@ Local planner uses the local costmap in order to calculate the local plans. Unli
 In this chapter you can find useful commands, which will help you to launch the project part by part i.e. seperately use navigation and fine positioning parts of the project. This commands directly run the launch files, which take care of everything else.
 
 To run Visual servoing for Fine Positioning, please, follow these steps:
-- First, 2 SSH connections to your tutlebot should be created. In our case, the command was: **ssh turtlebot@192.168.0.100**
-- Secondly, we launch the base adn the corresponding features: **roslaunch turtlebot_bringup minimal.launch**
+- First, two SSH connections to your tutlebot should be created. In our case, the command was: **ssh turtlebot@192.168.0.100**
+- Secondly, we launch the base and the corresponding features: **roslaunch turtlebot_bringup minimal.launch**
 - Thirdly, the kinect is launched using: **roslaunch freenect_launch freenect.launch publish_tf:=false**
 - Next, parameters of the markers are initialized using: **roslaunch rbx2_ar_tags ar_large_markers_kinect.launch**
 - Finally, the preparations are finished, and the robot starts to perform his routine **roslaunch rbx2_ar_tags ar_follower.launch**
