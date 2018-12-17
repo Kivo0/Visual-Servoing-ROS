@@ -15,7 +15,7 @@ III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Tur
    * [Move_base node](https://github.com/Kivo0/Visual-Servoing-ROS#Move_base-node)
     
 
-* [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
+IV. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
 
 
 
@@ -64,7 +64,8 @@ Local planner uses the local costmap in order to calculate the local plans. Unli
 
 
 
-#### Basic Commands
+IV. Basic Commands
+------------------
 In this chapter you can find useful commands, which will help you to launch the project part by part i.e. seperately use navigation and fine positioning parts of the project. This commands directly run the launch files, which take care of everything else.
 
 To run Visual servoing for Fine Positioning, please, follow these steps:
