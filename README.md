@@ -37,7 +37,7 @@ III. Turtlebot Navigation
 
 #### Move_base node
 Function of this node from navigation stack is to move a robot from its present position to a designated (goal) position. This node is responsible for linking the global planner and the local planner for path planning, connecting to rotate recovery package if the robot is stuck in some obstacle, and connecting global costmap and local costmap for getting the map of obstacles of the environment. 
-
+![alt text](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png)
 #### Global Planner
 When a new goal is received by the move_base node, this goal is immediately sent to the global planner. Then, the global planner is in charge of calculating a safe path in order to arrive at that goal pose. This path is calculated before the robot start moving, so it will not take into account the readings that the robot sensors are acquiring while moving. For calculating the path the global planner uses the costmap.
 
