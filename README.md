@@ -28,13 +28,11 @@ the some other guy should write here !!!!!!!! not on microsoft Word!!!!!
    Basic Commands
    ---------------
 
-#### Create 4 SSH: : ssh turtlebot@192.168.0.100
+##### Create 4 SSH: ssh turtlebot@192.168.0.100
 
-### MINIMAL (on robot): 
+#### MINIMAL (on robot): roslaunch turtlebot_bringup minimal.launch
 
-roslaunch turtlebot_bringup minimal.launch
-
-### Kinect launch(robot or PC):###
+### Kinect launch(robot or PC):
 
 roslaunch freenect_launch freenect.launch publish_tf:=false
 
