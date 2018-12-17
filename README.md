@@ -2,23 +2,33 @@
 ## Main Contributors: MIKHAILOV Ivan, BOTROS Karim
 Contributor: Some guy named Hussain, not sure though
 
-###Create 4 SSH:###
+## Table of Content:
+
+[Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project Description)
+
+
+I. Project Description
+______________________
+
+here is the description
+
+### Create 4 SSH: ###
 
 ssh turtlebot@192.168.0.100
 
-###MINIMAL (on robot):###
+### MINIMAL (on robot): ###
 
 roslaunch turtlebot_bringup minimal.launch
 
-###Kinect launch(robot or PC):###
+### Kinect launch(robot or PC):###
 
 roslaunch freenect_launch freenect.launch publish_tf:=false
 
-###Launch file for marker parameters to be detected (size, error etc.) - (robot or PC):###
+### Launch file for marker parameters to be detected (size, error etc.) - (robot or PC):###
 
 roslaunch rbx2_ar_tags ar_large_markers_kinect.launch
 
-###Modified Follower Code:###
+### Modified Follower Code:###
 
 roslaunch rbx2_ar_tags ar_follower.launch
 
