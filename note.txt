@@ -1,0 +1,97 @@
+###Create 4 SSH:###
+
+ssh turtlebot@192.168.0.100
+
+###MINIMAL (on robot):###
+
+roslaunch turtlebot_bringup minimal.launch
+
+###Kinect launch(robot or PC):###
+
+roslaunch freenect_launch freenect.launch publish_tf:=false
+
+###Launch file for marker parameters to be detected (size, error etc.) - (robot or PC):###
+
+roslaunch rbx2_ar_tags ar_large_markers_kinect.launch
+
+###Modified Follower Code:###
+
+roslaunch rbx2_ar_tags ar_follower.launch
+
+###COMPILE THE CODE (not literally):###
+
+scp -r /home/mscv/ros/indigo/catkin_ws/src/rbx2_ar_tags/nodes/ar_follower2.py turtlebot@192.168.0.100:/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags/nodes
+
+### Update launch file ###
+
+scp -r /home/mscv/ros/indigo/catkin_ws/src/rbx2_ar_tags/launch/ar_large_markers_kinect.launch turtlebot@192.168.0.100:/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags/launch
+
+### Update all nodes (the whole nodes folder)
+
+scp -r /home/mscv/ros/indigo/catkin_ws/src/rbx2_ar_tags/nodes turtlebot@192.168.0.100:/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags
+
+### Update the whole launch file folder ###
+
+scp -r /home/mscv/ros/indigo/catkin_ws/src/rbx2_ar_tags/launch turtlebot@192.168.0.100:/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags
+
+########################## UPDATE MAPS
+
+scp -r /home/mscv/ros/indigo/catkin_ws/src/rbx2_ar_tags/map turtlebot@192.168.0.100:/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags
+
+
+###################USEFUL LINKS:
+
+Orientation, pose extraction:
+
+1. https://robotics.stackexchange.com/questions/8223/determining-pose-from-ar-track-alvar-message-in-ros
+
+
+Rotation Matrix from node:
+
+2. https://answers.ros.org/question/12668/how-to-measure-an-angle/
+
+Rotation Matrix class:
+
+3. http://docs.ros.org/jade/api/ar_track_alvar/html/classalvar_1_1Rotation.html
+
+ROLL, YAW, PITCH. !!!!!!!!!!
+
+C++
+4. http://ros-robotics.blogspot.com/2015/04/getting-roll-pitch-and-yaw-from.html
+
+Python
+5.https://answers.ros.org/question/69754/quaternion-transformations-in-python/
+
+QUATERNIAN ROTATION !!!!!!! RELATIVE POSITION
+
+6. http://wiki.ros.org/tf2/Tutorials/Quaternions#Applying_a_quaternion_rotation
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NAVIGATION!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+1. First book, page 97 (according to adobe acrobat contents on the left, may not correspon with real page numbers)
+
+2. ROBOT BY EXAMPLE GITHUB REPOSITORY: https://github.com/pirobot/rbx1
+
+
+
+
+
+Launch amcl with pre-created map.
+1. roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags/map/test_map22.yaml
+
+See stuff in rviz and select destinations
+2. roslaunch turtlebot_rviz_launchers view_navigation.launch --screen 
+
+
+AUTO:
+1. roslaunch rbx2_ar_tags navi_1.launch
+2. roslaunch rbx2_ar_tags navi_2.launch
+
+
+http://docs.ros.org/fuerte/api/move_base_msgs/html/namespacemove__base__msgs.html
+
+update the whole project folder
+scp -r /home/mscv/ros/indigo/catkin_ws/src/rbx2_ar_tags turtlebot@192.168.0.100:/home/turtlebot/ros/indigo/catkin_ws/src/
