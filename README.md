@@ -1,2 +1,5 @@
 # Visual-Servoing-ROS
-this is for visual servoing of a turtlebot combined with navigation management
+Main Contributors: MIKHAILOV Ivan, BOTROS Karim
+Contributor: Hassan
+
+
