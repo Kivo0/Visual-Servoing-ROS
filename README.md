@@ -29,7 +29,7 @@ the some other guy should write here !!!!!!!! not on microsoft Word!!!!!
 Are you talking about that Goosesain guy? Not sure I saw him today!
 
 
-#### Basic Commands------------------
+#### Basic Commands
 In this chapter you can find useful commands, which will help you to launch the project part by part i.e. seperately use navigation and fine positioning parts of the project. This commands directly run the launch files, which take care of everything else.
 
 To run Visual servoing for Fine Positioning, please, follow these steps:
