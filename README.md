@@ -9,8 +9,8 @@ I. [Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project-
 II. [Hardware components](https://github.com/Kivo0/Visual-Servoing-ROS#ii-Hardware-contraints)
 
 III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Turtlebot-Navigation)
-     *[Ros Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Ros-Navigation)
-	 *[Move_base node](https://github.com/Kivo0/Visual-Servoing-ROS#Move_base-node)
+     * [Ros Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Ros-Navigation)
+     * [Move_base node](https://github.com/Kivo0/Visual-Servoing-ROS#Move_base-node)
     
 
 * [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
