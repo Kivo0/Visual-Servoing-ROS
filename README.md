@@ -1,6 +1,6 @@
 # Visual-Servoing-ROS
-## Main Contributors: MIKHAILOV Ivan, BOTROS Karim
-Contributor: Some guy named Hussain, not sure though
+## Main Contributors: MIKHAILOV Ivan, BOTROS Karim, SAEED Hassan
+
 
 ## Table of Content:
 
@@ -25,9 +25,13 @@ III. Turtlebot Navigation
    ---------------------
 #### Ros Navigation
  Navigation Stack takes in current location of the robot, the goal pose, the Odometry data of Robot (wheel encoders etc) and data from a sensor as an input, and outputs the necessary velocity commands and forward them to the mobile base in order to move the robot to the designated goal:
-•	Odometry source: This gives robot position with respect to its initial position eg via wheel encoders. The odom publishes to the Navigation stack, with message type nav_msgs/ Odometry
+ 
+•	Odometry source: This gives robot position with respect to its initial position eg via wheel encoders. The odom publishes to the Navigation stack, with message type nav_msgs/ Odometry.
+
 •	Sensor source: In navigation sensors are used for localizing the robot in the map (via kinect) and also to detect the obstacles in the path of the robot.
-•	 Sensor transforms/tf: Data captured by the various sensors must be referenced to a common frame of reference (usually the base_link) for comparison with data coming from different sensors. The robot should publish the relationship between the main robot coordinate frame and the different sensors' frames using ROS transforms. 
+
+•	 Sensor transforms/tf: Data captured by the various sensors must be referenced to a common frame of reference (usually the base_link) for comparison with data coming from different sensors. The robot should publish the relationship between the main robot coordinate frame and the different sensors' frames using ROS transforms.
+
 •	Base_controller: It is to convert the output of the Navigation stack, which is a Twist (geometry_msgs/Twist) message, into corresponding motor velocities for the robot.
 
 #### Move_base node
