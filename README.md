@@ -25,6 +25,7 @@ III. Turtlebot Navigation
    ---------------------
 #### Ros Navigation
  Navigation Stack takes in current location of the robot, the goal pose, the Odometry data of Robot (wheel encoders etc) and data from a sensor as an input, and outputs the necessary velocity commands and forward them to the mobile base in order to move the robot to the designated goal:
+ ![alt text](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/overview_tf.png)
  
 •	Odometry source: This gives robot position with respect to its initial position eg via wheel encoders. The odom publishes to the Navigation stack, with message type nav_msgs/ Odometry.
 
