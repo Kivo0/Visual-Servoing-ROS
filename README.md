@@ -13,6 +13,8 @@ III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Tur
    * [Ros Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Ros-Navigation)
      
    * [Move_base node](https://github.com/Kivo0/Visual-Servoing-ROS#Move_base-node)
+   
+   * [Global Planner](https://github.com/Kivo0/Visual-Servoing-ROS#Global-Planner)
     
 
 IV. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
