@@ -1,0 +1,15 @@
+<launch>
+	
+	<include file = "$(find turtlebot_bringup)/launch/minimal.launch"/>
+	<include file = "$(find freenect_launch)/launch/freenect.launch">
+	<arg name="publish_tf" default="false"/>
+	</include>
+	
+	<include file = "$(find rbx2_ar_tags)/launch/ar_large_markers_kinect.launch"/>	
+	<include file = "$(find rbx2_ar_tags)/launch/ar_follower.launch"/>	
+
+	<!--publish_tf:=false-->
+</launch>
+
+
+
