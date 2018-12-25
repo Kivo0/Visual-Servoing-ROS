@@ -1,0 +1,3 @@
+  <launch>
+    <node pkg="rbx2_ar_tags" name="vs_master" type="vs_terminal.sh" output="screen"/>
+  </launch>
