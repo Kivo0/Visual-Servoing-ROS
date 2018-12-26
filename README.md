@@ -71,6 +71,16 @@ After global planner has calculated the path to follow, this path is sent to loc
 #### Local costmap
 Local planner uses the local costmap in order to calculate the local plans. Unlike the global costmap, the local costmap is created directly via robot’s sensor readings.
 
+I. Visual Servoing
+   ----------------
+   
+   #### Searching for Target!
+   first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot 360&deg
+   
+   
+   
+   
+     
 
 
 
