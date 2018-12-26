@@ -23,9 +23,22 @@ III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Tur
    * [Local Planner](https://github.com/Kivo0/Visual-Servoing-ROS#Local-Planner)
    
    * [Local costmap](https://github.com/Kivo0/Visual-Servoing-ROS#Local-costmap)
+
+IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Servoing)
+     
+   * [Searching for Target!](https://github.com/Kivo0/Visual-Servoing-ROS#Searching-for-Target!)
+    
+   * [Attacking the Target](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Target)
+   
+   * [Parking "Centering the robot to the center of the marker" ](https://github.com/Kivo0/Visual-Servoing-ROS#parking-centering-the-robot-to-the-center-of-the-marker)
+   
+   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#Markers!)
    
 
-IV. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
+V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-Speed-Control!)
+
+
+VI. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#vi-Basic-Commands)
 
 
 
@@ -71,10 +84,35 @@ After global planner has calculated the path to follow, this path is sent to loc
 #### Local costmap
 Local planner uses the local costmap in order to calculate the local plans. Unlike the global costmap, the local costmap is created directly via robot’s sensor readings.
 
+IV. Visual Servoing
+   ----------------
+   
+   #### Searching for Target!
+   first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
+   
+   #### Attacking the Target
+   
+   there is many ways to do to arrive at the target **"All roads leads to Maker" by Botros, Karim .. myself!**,  initially the alvar library can't center the robot or align it perpendicular to the target if the robot was already near at the begining of the servoing algorithm to the marker so we thought of using **yaw** a component of Quaternions number system which indicates the perpendicularity of the marker plane with the kinect plane. there are other components in Quaternions but we are only interested in yaw for now, after many attempts and experiments recordings we achieved our task of making the robot perpindcular to the surface of the marker
+   
+   #### Parking "Centering the robot to the center of the marker"
+   
+   
+   
+   
+   
+   
+   #### Markers!
+   
+ 
+
+V. Speed Control!
+------------------
+
+it is hard task to achieve the same gap distance between the robot and the marker! that is because the robot increases its speed linearly to achieve the target therefore if the initial distance is close to the target distance the initial speed will be low and the robot will not be close to the target at the end. and also if the robot is far away the initial speed will be high and the robot might hit the marker. therefore we had to apply control to this linear model. **note: "this model can be modeled with the non linearities such as the friction of the kabuki base wheels with the ground and weight changes on the robot and many other factors but we neglected these factors to make the system linear"**. so we get the current speed of the robot and apply the control equation and feed the new speed to the motors. Feedback PID speed Control.
+     
 
 
-
-IV. Basic Commands
+VI. Basic Commands
 ------------------
 In this chapter you can find useful commands, which will help you to launch the project part by part i.e. seperately use navigation and fine positioning parts of the project. This commands directly run the launch files, which take care of everything else.
 
