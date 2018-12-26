@@ -32,10 +32,10 @@ IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Serv
    
    * [Parking "Centering the robot to the center of the marker" ](https://github.com/Kivo0/Visual-Servoing-ROS#parking-centering-the-robot-to-the-center-of-the-marker)
    
-   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#Markers!)
+   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#markers)
    
 
-V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-Speed-Control!)
+V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-speed-control)
 
 
 VI. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#vi-Basic-Commands)
