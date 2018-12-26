@@ -1,0 +1,17 @@
+<launch>
+
+	<!--include another launch file -->
+	<include file = "$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
+	
+
+	<node pkg="rostopic" type="rostopic" name="rostopic" args="pub -1 /initialpose geometry_msgs/PoseWithCovarianceStamped 
+'{header: {seq: 0, stamp:{secs: 0, nsecs: 0}, frame_id: 'map'}, pose: {pose:{position: {x: -4.12375688553, y: 6.47580575943 , z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.728350469327, w: 0.685204782405}}}}'"/>
+
+
+	<node pkg="rostopic" type="rostopic" name="rostopicgoal" args="pub -1 /move_base_simple/goal geometry_msgs/PoseStamped 
+'{header: {seq: 0, stamp:{secs: 0, nsecs: 0}, frame_id: 'map'}, pose:{position: {x: 0.685204782405, y: 0.605988502502 , z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.0497133184746, w: 0.998763528552}}}'"/>
+
+</launch>
+
+
+

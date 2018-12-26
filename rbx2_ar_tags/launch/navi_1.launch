@@ -1,0 +1,11 @@
+<launch>
+
+	<!--include another launch file -->
+
+	<include file = "$(find turtlebot_bringup)/launch/minimal.launch"/>
+	<include file = "$(find turtlebot_navigation)/launch/amcl_demo.launch">
+	<arg name= "map_file" value="/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags/map/test_map_pref.yaml"/>
+	</include>
+	<!--<include file = "$(find rbx2_ar_tags)/launch/ar_large_markers_kinect.launch"/>	
+	<include file = "$(find rbx2_ar_tags)/launch/ar_follower.launch"/>-->
+</launch>	
