@@ -30,7 +30,7 @@ IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Serv
     
    * [Attacking the Target](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Target)
    
-   * [Parking "Centering the robot to the center of the marker"](https://github.com/Kivo0/Visual-Servoing-ROS#Parking-"Centering the-robot-to-the-center-of-the-marker")
+   * [Parking {Centering the robot to the center of the marker} ](https://github.com/Kivo0/Visual-Servoing-ROS#Parking-"Centering-the-robot-to-the-center-of-the-marker"-)
    
    * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#Markers!)
    
