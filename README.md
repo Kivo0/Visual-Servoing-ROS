@@ -75,7 +75,7 @@ I. Visual Servoing
    ----------------
    
    #### Searching for Target!
-   first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot 360&deg
+   first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot 360&deg;
    
    
    
