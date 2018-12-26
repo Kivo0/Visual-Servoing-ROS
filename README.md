@@ -23,9 +23,22 @@ III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Tur
    * [Local Planner](https://github.com/Kivo0/Visual-Servoing-ROS#Local-Planner)
    
    * [Local costmap](https://github.com/Kivo0/Visual-Servoing-ROS#Local-costmap)
+
+IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Servoing)
+     
+   * [Searching for Target!](https://github.com/Kivo0/Visual-Servoing-ROS#Searching-for-Target!)
+    
+   * [Attacking the Target](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Target)
+   
+   * [Parking "Centering the robot to the center of the marker"](https://github.com/Kivo0/Visual-Servoing-ROS#Parking-"Centering the-robot-to-the-center-of-the-marker")
+   
+   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#Markers!)
    
 
-IV. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#Basic-Commands)
+V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-Speed-Control!)
+
+
+VI. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#vi-Basic-Commands)
 
 
 
