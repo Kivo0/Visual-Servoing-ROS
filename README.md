@@ -1,6 +1,13 @@
 # Visual-Servoing-ROS
-## Main Contributors: MIKHAILOV Ivan, BOTROS Karim, SAEED Hassan
-[![GoTo Wiki](https://github.com/Kivo0/Visual-Servoing-ROS.wiki.git)]()
+
+## Team Members: MIKHAILOV Ivan, BOTROS Karim, SAEED Hassan
+
+[![botros karim](https://avatars2.githubusercontent.com/u/32384055?s=460&v=4)](https://github.com/Kivo0) 
+|---|---|---
+[botros karim](https://github.com/Kivo0) | [Ivan](na) | [Hassan](na)
+
+
+
 
 ## Table of Content:
 
