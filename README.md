@@ -40,8 +40,6 @@ V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-speed-control
 VI. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#vi-Basic-Commands)
 
 
-
-
 I. Project Description
    -------------------
 we are addressing the problem of visual servoing of a mobile robot "turtlebot 2" our beloved turlte. the problem is the localization of an indoor mobile robot is never accurate. so in order to achieve an accuracy of few centimeters or even milimeter scale. we need to do visual servoing to reach the target with minimum distance. so in easy words. our robot goes from outside the room to the center of the room using [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Turtlebot-Navigation)
@@ -91,6 +89,9 @@ IV. Visual Servoing
    In the project we used several set ups, each of which provides certain advantages and disadvantages. Each set up is characterized by the size and the amount of tags:
 - Bigger tags are generally better detected from a higher distance, but the precision drops on smaller distance up to inability to detect the tag when being too close, which is exactly the often encountered case for fine positioning. 
 - Smaller tags are better detected from up close, on bigger distances the tag is lost very often, resulting in some issues from unsteady motion to no detection at all.
+
+Example of the AR tag and also the tag we used for the Fine Positioning (#5) can be observed on the figure below:
+![alt text](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5.png)
 
 Considering the aforementioned properties, we tried several solitary (one-tag) set ups, including:
 - one big tag of *15x15 cm*
