@@ -2,9 +2,11 @@
 
 ## Team Members: MIKHAILOV Ivan, BOTROS Karim, SAEED Hassan
 
-[![botros karim](https://avatars2.githubusercontent.com/u/32384055?s=460&v=4)](https://github.com/Kivo0) 
+[![botros karim](https://s.gravatar.com/avatar/5149755ee69696f33d24c159cf243363?s=80)](https://github.com/Kivo0) 
 |---|---|---
-[botros karim](https://github.com/Kivo0) | [Ivan](na) | [Hassan](na)
+[botros karim](https://github.com/Kivo0) 
+
+| [Ivan](na) | [Hassan](na)
 
 
 
