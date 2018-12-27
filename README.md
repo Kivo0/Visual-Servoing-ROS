@@ -95,7 +95,7 @@ IV. Visual Servoing
 - Smaller tags are better detected from up close, on bigger distances the tag is lost very often, resulting in some issues from unsteady motion to no detection at all.
 
 Example of the AR tag and also the tag we used for the Fine Positioning (#5) can be observed on the figure below:
-<img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5.png" width="150">
+<img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5.png" width="300" align="center">
 
 Considering the aforementioned properties, we tried several solitary (one-tag) set ups, including:
 - one big tag of *15x15 cm*
