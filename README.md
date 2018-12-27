@@ -64,7 +64,10 @@ III. Turtlebot Navigation
 
 #### Move_base node
 Function of this node from navigation stack is to move a robot from its present position to a designated (goal) position. This node is responsible for linking the global planner and the local planner for path planning, connecting to rotate recovery package if the robot is stuck in some obstacle, and connecting global costmap and local costmap for getting the map of obstacles of the environment. 
-![alt text](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png)
+
+<img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png" width="150">
+
+
 #### Global Planner
 When a new goal is received by the move_base node, this goal is immediately sent to the global planner. Then, the global planner is in charge of calculating a safe path in order to arrive at that goal pose. This path is calculated before the robot start moving, so it will not take into account the readings that the robot sensors are acquiring while moving. For calculating the path the global planner uses the costmap.
 
@@ -100,7 +103,7 @@ Considering the aforementioned properties, we tried several solitary (one-tag) s
 - one small tag of *7x7 cm*
 - one tiny tag of *5x5 cm*
 
-During the usage of one-tag set ups, we devised a new approach, which will involve the usage of a smaller tag, forming a pair of to tags, to counter the various issues, when the tobot approaches the target withing the distance of several centimeters. Generally, at that point the bigger tag doesn't fit in the field of view of Kinect, therefore we needed a smaller tag, but at the same time the approach should have still handled good distances. For this reason, it was decided to use **both tags at the same time - bigger and smaller.**
+During the usage of one-tag set ups, we devised a new approach, which will involve the usage of a smaller tag, forming a pair of to tags, to counter the various issues, when the tobot approaches the target withing the distance of several centimeters. Generally, at that point the bigger tag doesn't fit in the field of view of Kinect, therefore we needed a smaller tag, but at the same time the approach should have still handled good distances. For this reason, Our Team was decided to use **both tags at the same time - bigger and smaller.**
 
 The sizes can depend on the distance, but the general idea is that the small tag handles the closest possible positioning of the robot, while the bigger one everything else. Several multiple-tag set ups used by our team are listed below:
 - two tags: *15x15 cm* + *10x10 cm*
@@ -112,7 +115,7 @@ The sizes can depend on the distance, but the general idea is that the small tag
 
 At the moment, we are using *15x15 cm* + *5x5 cm* set. One might wonder, how the multiple tag detection is handled. For this purpose **ar_large_markers_kinect.launch** file can be accessed and the parameters there, corresponding to the parameters of the tags, can be observed. We found out, that true multiple tag handling doesn't need to be implemented i.e. positioning of each tag in respect to each other are not necessary for our purpose. Therefore, only the biggest tag size is put in the aforementioned .launch file. In addition, both tags are exactly the same, not considering the size. So when the robot approaches the target and starts to lose the bigger tag from time to time, the smaller one compensates for these losses until the biggest one is lost completely or appears to be detected very rarely, and the small one is detected constantly due to it's smaller size.
 
-This solution drastically improves **precision and detection uptime** "uptime is the time in which the kinect detects the target in this case it changed from alternating to steady continious signal" , making it nearly flawless. It is advised to use two tags at all times, when up-close fine positioning is required.
+This solution drastically improves **precision and detection uptime** "uptime is the time in which the kinect detects the target in this case it changed from alternating to steady continious signal" , making it nearly flawless. It is advised to use two tags at all times, when up-close fine positioning is required. if the task requires the robot to be very close to the marker in range of 20 cm* to 5 cm* then only the smaller tag is needed.
    
    #### Searching for Target!
    first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
