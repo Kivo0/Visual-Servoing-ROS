@@ -65,7 +65,7 @@ III. Turtlebot Navigation
 #### Move_base node
 Function of this node from navigation stack is to move a robot from its present position to a designated (goal) position. This node is responsible for linking the global planner and the local planner for path planning, connecting to rotate recovery package if the robot is stuck in some obstacle, and connecting global costmap and local costmap for getting the map of obstacles of the environment. 
 
-<p style="text-align:center;"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png" width="300" >
+<p style="text-align:center;"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png" width="300" ></p>
 
 
 #### Global Planner
@@ -118,7 +118,7 @@ At the moment, we are using *15x15 cm* + *5x5 cm* set. One might wonder, how the
 This solution drastically improves **precision and detection uptime** (uptime is the time in which the kinect detects the target in this case it changed from alternating to steady continious signal), making it nearly flawless. It is advised to use two tags at all times, when up-close fine positioning is required. If the task requires the robot to be very close to the marker in range of 20 cm* to 5 cm* then only the smaller tag is needed.
 
 The final set up used in the approach can be seen below and is available for printing in the original size:
-<img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="150">
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="150"></p>
    
    #### Searching for Target!
    first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
