@@ -25,14 +25,13 @@ III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Tur
    * [Local costmap](https://github.com/Kivo0/Visual-Servoing-ROS#Local-costmap)
 
 IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Servoing)
+   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#markers)
      
    * [Searching for Target!](https://github.com/Kivo0/Visual-Servoing-ROS#Searching-for-Target!)
     
    * [Attacking the Target](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Target)
    
    * [Parking "Centering the robot to the center of the marker" ](https://github.com/Kivo0/Visual-Servoing-ROS#parking-centering-the-robot-to-the-center-of-the-marker)
-   
-   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#markers)
    
 
 V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-speed-control)
@@ -88,7 +87,16 @@ IV. Visual Servoing
    ----------------
    #### Markers!
    For the purpose of Fine Positioning we used Alvar for ROS as our main library (http://wiki.ros.org/ar_track_alvar). The reasons why Alvar was chosen are mentioned in the ROS survey written by our team and included in this repository. Nevertheless, the main idea is to use AR tags as an artificial marking on the target, which needs to be approached by a robot.
-   In the project we attempted at usage of several 
+   In the project we used several set ups, each of which provides certain advantages and disadvantages. Each set up is characterized by the size and the amount of tags:
+- Bigger tags are generally better detected from a higher distance, but the precision drops on smaller distance up to inability to detect the tag when being too close, which is exactly the often encountered case for fine positioning. 
+- Smaller tags are better detected from up close, on bigger distances the tag is lost very often, resulting in some issues from unsteady motion to no detection at all.
+   Considering the aforementioned properties, we tried several solitary (one-tag) set ups, including:
+- one big tag of *15x15 cm*
+- one average tag of *10x10 cm*
+- one small tag of *7x7 cm*
+- one tiny tag of *5x5 cm*
+ And several multiple-tag set ups, which have the combinations of the above:
+-
    
    
    #### Searching for Target!
