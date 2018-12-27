@@ -86,6 +86,10 @@ Local planner uses the local costmap in order to calculate the local plans. Unli
 
 IV. Visual Servoing
    ----------------
+   #### Markers!
+   For the purpose of Fine Positioning we used Alvar for ROS as our main library (http://wiki.ros.org/ar_track_alvar). The reasons why Alvar was chosen are mentioned in the ROS survey written by our team and included in this repository. Nevertheless, the main idea is to use AR tags as an artificial marking on the target, which needs to be approached by a robot.
+   In the project we attempted at usage of several 
+   
    
    #### Searching for Target!
    first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
@@ -97,12 +101,7 @@ IV. Visual Servoing
    #### Parking "Centering the robot to the center of the marker"
    
    
-   
-   
-   
-   
-   #### Markers!
-   For the purpose of Fine Positioning we used Alvar for ROS as our main library (http://wiki.ros.org/ar_track_alvar).
+
  
 
 V. Speed Control!
