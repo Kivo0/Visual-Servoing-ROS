@@ -97,7 +97,10 @@ Considering the aforementioned properties, we tried several solitary (one-tag) s
 - one average tag of *10x10 cm*
 - one small tag of *7x7 cm*
 - one tiny tag of *5x5 cm*
- And several multiple-tag set ups, which have the combinations of the above:
+
+During the usage of one-tag set ups, we devised a new approach, which will involve the usage of a smaller tag, forming a pair of to tags, to counter the various issues, when the tobot approaches the target withing the distance of several centimeters. Generally, at that point the bigger tag doesn't fit in the field of view of Kinect, therefore we needed a smaller tag, but at the same time the approach should have still handled good distances. For this reason, it was decided to use both tags at the same time - bigger and small.
+
+The sizes can depend on the distance, but the general idea is that the small tag handles the closest possible positioning of the robot, while the bigger one everything else. Several multiple-tag set ups used by our team are listed below:
 - two tags: *15x15 cm* + *10x10 cm*
 - two tags: *15x15 cm* + *7x7 cm*
 - two tags: *15x15 cm* + *5x5 cm*
