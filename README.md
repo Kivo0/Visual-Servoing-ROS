@@ -87,16 +87,23 @@ IV. Visual Servoing
    ----------------
    #### Markers!
    For the purpose of Fine Positioning we used Alvar for ROS as our main library (http://wiki.ros.org/ar_track_alvar). The reasons why Alvar was chosen are mentioned in the ROS survey written by our team and included in this repository. Nevertheless, the main idea is to use AR tags as an artificial marking on the target, which needs to be approached by a robot.
+   
    In the project we used several set ups, each of which provides certain advantages and disadvantages. Each set up is characterized by the size and the amount of tags:
 - Bigger tags are generally better detected from a higher distance, but the precision drops on smaller distance up to inability to detect the tag when being too close, which is exactly the often encountered case for fine positioning. 
 - Smaller tags are better detected from up close, on bigger distances the tag is lost very often, resulting in some issues from unsteady motion to no detection at all.
-   Considering the aforementioned properties, we tried several solitary (one-tag) set ups, including:
+
+Considering the aforementioned properties, we tried several solitary (one-tag) set ups, including:
 - one big tag of *15x15 cm*
 - one average tag of *10x10 cm*
 - one small tag of *7x7 cm*
 - one tiny tag of *5x5 cm*
  And several multiple-tag set ups, which have the combinations of the above:
--
+- two tags: *15x15 cm* + *10x10 cm*
+- two tags: *15x15 cm* + *7x7 cm*
+- two tags: *15x15 cm* + *5x5 cm*
+- two tags: *10x10 cm* + *7x7 cm*
+- two tags: *10x10 cm* + *5x5 cm*
+- two tags: *7x7 cm* + *5x5 cm*
    
    
    #### Searching for Target!
