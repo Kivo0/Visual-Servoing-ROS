@@ -102,7 +102,7 @@ IV. Visual Servoing
    
    
    #### Markers!
-   
+   For the purpose of Fine Positioning we used Alvar for ROS as our main library (http://wiki.ros.org/ar_track_alvar).
  
 
 V. Speed Control!
