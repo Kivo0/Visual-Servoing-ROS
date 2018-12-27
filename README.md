@@ -53,7 +53,7 @@ III. Turtlebot Navigation
 #### Ros Navigation
  Navigation Stack takes in current location of the robot, the goal pose, the Odometry data of Robot (wheel encoders etc) and data from a sensor as an input, and outputs the necessary velocity commands and forward them to the mobile base in order to move the robot to the designated goal:
 
-<p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/overview_tf.png" width="500" ></p>
+<p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/overview_tf.png" width="800" ></p>
 
  
 •	Odometry source: This gives robot position with respect to its initial position eg via wheel encoders. The odom publishes to the Navigation stack, with message type nav_msgs/ Odometry.
@@ -67,7 +67,7 @@ III. Turtlebot Navigation
 #### Move_base node
 Function of this node from navigation stack is to move a robot from its present position to a designated (goal) position. This node is responsible for linking the global planner and the local planner for path planning, connecting to rotate recovery package if the robot is stuck in some obstacle, and connecting global costmap and local costmap for getting the map of obstacles of the environment. 
 
-<p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png" width="500" ></p>
+<p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png" width="450" ></p>
 
 
 #### Global Planner
@@ -97,7 +97,7 @@ IV. Visual Servoing
 - Smaller tags are better detected from up close, on bigger distances the tag is lost very often, resulting in some issues from unsteady motion to no detection at all.
 
 Example of the AR tag and also the tag we used for the Fine Positioning (#5) can be observed on the figure below:
-<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5.png" width="150"></p>
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5.png" width="170"></p>
 
 Considering the aforementioned properties, we tried several solitary (one-tag) set ups, including:
 - one big tag of *15x15 cm*
@@ -120,7 +120,7 @@ At the moment, we are using *15x15 cm* + *5x5 cm* set. One might wonder, how the
 This solution drastically improves **precision and detection uptime** (uptime is the time in which the kinect detects the target in this case it changed from alternating to steady continious signal), making it nearly flawless. It is advised to use two tags at all times, when up-close fine positioning is required. If the task requires the robot to be very close to the marker in range of 20 cm* to 5 cm* then only the smaller tag is needed.
 
 The final set up used in the approach can be seen below and is available for printing in the original size:
-<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="350"></p>
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="250"></p>
    
    #### Searching for Target!
    first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
