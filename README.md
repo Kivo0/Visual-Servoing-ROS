@@ -167,5 +167,5 @@ Please, note, that the paths used above should be changed to your own, depending
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/LICENSE)
 
 
-[![MIT Licence](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/mit.svg?v=103)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/LICENSE)
+[![MIT Licence](https://github.com/Kivo0/Visual-Servoing-ROS/tree/master/images/mit-150x33.png)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/LICENSE)
 
