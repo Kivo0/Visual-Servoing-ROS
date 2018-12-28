@@ -114,7 +114,7 @@ The final set up used in the approach can be seen below and is available for pri
    
    
 
- Results of navigation can be observed in a video on a YouTube channel, created specifically for this project:
+ Results of visual servoing can be observed in a video on a YouTube channel, created specifically for this project:
 [![](http://img.youtube.com/vi/l2s1D08dkuQ/0.jpg)](http://www.youtube.com/watch?v=l2s1D08dkuQ "")
 
 V. Speed Control!
