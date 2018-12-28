@@ -162,7 +162,7 @@ For this purpose it is easy enough to update the whole project folder as followe
 Please, note, that the paths used above should be changed to your own, depending on your system paths.
 
 
-## Licence
+## LICENSE
 
 [![MIT LICENSE](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/LICENSE)
 
