@@ -6,7 +6,7 @@
 
   ---|---
 
-[botros karim](https://github.com/Kivo0) | [Ivan](https://github.com/ivan) 
+[botros karim](https://github.com/Kivo0) | [Ivan](https://github.com/ivan) | [Hassan](https://github.com/hassansrs)  
 
 
 
@@ -69,7 +69,7 @@ III. Turtlebot Navigation
  
  Following map generation of the enviornment, initial(starting and goal position) are extracted. Please refer to the repository for detials on how to proceed with this: https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/Turtlebot_navigation.pdf
  
- After we have initial and goal position of turtlebot we can proceed with next steps, i.e are connection with turtlebot and than controllig it via publishing initial and goal position.
+ After we have initial and goal position of turtlebot we can proceed with next steps, i.e are connection with turtlebot and than controlling it via publishing initial and goal position.
  
  To control our turtlebot which is the netbook(Asus) via the workstation(Dell).
  `$ ssh turtlebot@192.168.0.100`
@@ -80,7 +80,7 @@ III. Turtlebot Navigation
  In the new terminal we launch:
   `$ roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags/map/test_map22.yaml`
   
- In the new terminal, while making sure turtlebot is placed on its original initial position please publish on initial position:
+ In the new terminal, while making sure turtlebot is placed on its original initial position please publish on initial position topic:
   `$ rostopic pub -1 /initialpose geometry_msgs/PoseWithCovarianceStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: -4.96073627472, y: 1.06203043461 , z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.371774223976, w: 0.928323179926}}}'`
  
  To proceed to the goal position copy in terminal following command:
