@@ -1,6 +1,6 @@
 # Visual-Servoing-ROS
 
-## Team Members: MIKHAILOV Ivan, BOTROS Karim, SAEED Hassan
+## Team Members:
 
 [![botros karim](https://s.gravatar.com/avatar/5149755ee69696f33d24c159cf243363?s=80)](https://github.com/Kivo0) | [![Ivan Mikhalov ](https://gravatar.com/avatar/48)](https://github.com/Ivan-Mikhailov) | [![hassan Saeed ](https://gravatar.com/avatar/222)](https://github.com/hassansrs) 
  ---|---|---
