@@ -63,7 +63,7 @@ III. Turtlebot Navigation
 
 <p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/overview_tf.png" width="800" ></p>
 
- #### Map Creation
+ #### Map Creation and Navigation
  
  A map is generated following the tutorial presetented on ROS WIKI page: http://wiki.ros.org/turtlebot_navigation/Tutorials/Build%20a%20map%20with%20SLAM
  
@@ -77,12 +77,16 @@ III. Turtlebot Navigation
  Then once connection with turtlebot is established, in the same terminal proceed with:
   `$ roslaunch turtlebot_bringup minimal.launch`
   
- In the new terminal we launched:
+ In the new terminal we launch:
   `$ roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags/map/test_map22.yaml`
   
  In the new terminal, while making sure turtlebot is placed on its original initial position please publish on initial position:
   `$ rostopic pub -1 /initialpose geometry_msgs/PoseWithCovarianceStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: -4.96073627472, y: 1.06203043461 , z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.371774223976, w: 0.928323179926}}}'`
+ 
+ To proceed to the goal position copy in terminal following command:
+  `$ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: 0.318982511759, y: -0.757121920586 , z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.360750805748, w: 0.932662241196}}}'`  
   
+While navigating problems incurred were related to collision with the edge of the room while turtlebot moves towards its goal, also sometimes due to speed turtlebot was not able to keep up on its original planned trajectory due to which it will stop moving. These problems can be solved by tuning parameters in navigation package. For details, on tuning turtlebot navigation package, please refer to this document: http://kaiyuzheng.me/documents/navguide.pdf
   
  
  
