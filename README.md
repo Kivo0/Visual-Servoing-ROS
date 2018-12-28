@@ -161,3 +161,9 @@ For this purpose it is easy enough to update the whole project folder as followe
 **scp -r /home/mscv/ros/indigo/catkin_ws/src/rbx2_ar_tags turtlebot@192.168.0.100:/home/turtlebot/ros/indigo/catkin_ws/src/**
 Please, note, that the paths used above should be changed to your own, depending on your system paths.
 
+
+## License
+
+[![MIT Licence](https://github.com/Kivo0/Visual-Servoing-ROS/tree/master/images/mit.svg)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/LICENSE)
+
+
