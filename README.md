@@ -2,9 +2,9 @@
 
 ## Team Members:
 
-[![botros karim](https://s.gravatar.com/avatar/5149755ee69696f33d24c159cf243363?s=80)](https://github.com/Kivo0) | [![Ivan Mikhalov ](https://gravatar.com/avatar/48)](https://github.com/Ivan-Mikhailov) | [![hassan Saeed ](https://gravatar.com/avatar/222)](https://github.com/hassansrs) 
+[![botros karim](https://s.gravatar.com/avatar/5149755ee69696f33d24c159cf243363?s=80)](https://github.com/Kivo0) | [![Ivan Mikhalov ](https://s.gravatar.com/avatar/6681bbc8ebfffa4946bfd93fa1efa4c3?s=80)](https://github.com/Ivan-Mikhailov) | [![hassan Saeed ](https://gravatar.com/avatar/222)](https://github.com/hassansrs) 
  ---|---|---
- [Karim Botros](https://github.com/Kivo0) | [Ivan](https://github.com/Ivan-Mikhailov) | [Hassan](https://github.com/hassansrs)  
+ [Karim Botros](https://github.com/Kivo0) | [Ivan MIKHAILOV](https://github.com/Ivan-Mikhailov) | [Hassan](https://github.com/hassansrs)  
 
 
 
@@ -77,10 +77,10 @@ III. Turtlebot Navigation
   `$ rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: 0.318982511759, y: -0.757121920586 , z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.360750805748, w: 0.932662241196}}}'`  
   
 While navigating problems incurred were related to collision with the edge of the room while turtlebot moves towards its goal, also sometimes due to speed turtlebot was not able to keep up on its original planned trajectory due to which it will stop moving. These problems can be solved by tuning parameters in navigation package. For details, on tuning turtlebot navigation package, please refer to this document: http://kaiyuzheng.me/documents/navguide.pdf
-  
- 
- 
 
+Results of navigation can be observed in a video on a YouTube channel, created specifically for this project:
+[![](http://img.youtube.com/vi/Kis-Ex1mv2Y/0.jpg)](http://www.youtube.com/watch?v=Kis-Ex1mv2Y "")
+  
 IV. Visual Servoing
    ----------------
    #### Markers!
@@ -126,9 +126,9 @@ The final set up used in the approach can be seen below and is available for pri
    
    #### Parking "Centering the robot to the center of the marker"
    
-   
 
- 
+Results of visual servoing can be observed in a video on a YouTube channel, created specifically for this project:
+[![](http://img.youtube.com/vi/l2s1D08dkuQ/0.jpg)](http://www.youtube.com/watch?v=l2s1D08dkuQ "") 
 
 V. Speed Control!
 ------------------
