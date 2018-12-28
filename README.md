@@ -18,17 +18,9 @@ III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Tur
      
    * [Ros Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Ros-Navigation)
      
-   * [Move_base node](https://github.com/Kivo0/Visual-Servoing-ROS#Move_base-node)
+   * [Map Creation and Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Map-Creation-and-Navigation)
    
-   * [Global Planner](https://github.com/Kivo0/Visual-Servoing-ROS#Global-Planner)
-   
-   * [Costmap](https://github.com/Kivo0/Visual-Servoing-ROS#Costmap)
-   
-   * [Global Costmap](https://github.com/Kivo0/Visual-Servoing-ROS#Global-Costmap)
-   
-   * [Local Planner](https://github.com/Kivo0/Visual-Servoing-ROS#Local-Planner)
-   
-   * [Local costmap](https://github.com/Kivo0/Visual-Servoing-ROS#Local-costmap)
+
 
 IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Servoing)
    * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#markers)
