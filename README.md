@@ -63,9 +63,29 @@ III. Turtlebot Navigation
 
 <p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/overview_tf.png" width="800" ></p>
 
+ #### Map Creation
  
-Results of navigation can be observed in a video on a YouTube channel, created specifically for this project:
-[![](http://img.youtube.com/vi/Kis-Ex1mv2Y/0.jpg)](http://www.youtube.com/watch?v=Kis-Ex1mv2Y "")
+ A map is generated following the tutorial presetented on ROS WIKI page: http://wiki.ros.org/turtlebot_navigation/Tutorials/Build%20a%20map%20with%20SLAM
+ 
+ Following map generation of the enviornment, initial(starting and goal position) are extracted. Please refer to the repository for detials on how to proceed with this: https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/Turtlebot_navigation.pdf
+ 
+ After we have initial and goal position of turtlebot we can proceed with next steps, i.e are connection with turtlebot and than controllig it via publishing initial and goal position.
+ 
+ To control our turtlebot which is the netbook(Asus) via the workstation(Dell).
+ `$ ssh turtlebot@192.168.0.100`
+ 
+ Then once connection with turtlebot is established, in the same terminal proceed with:
+  `$ roslaunch turtlebot_bringup minimal.launch`
+  
+ In the new terminal we launched:
+  `$ roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/ros/indigo/catkin_ws/src/rbx2_ar_tags/map/test_map22.yaml`
+  
+ In the new terminal, while making sure turtlebot is placed on its original initial position please publish on initial position:
+  `$ rostopic pub -1 /initialpose geometry_msgs/PoseWithCovarianceStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: -4.96073627472, y: 1.06203043461 , z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.371774223976, w: 0.928323179926}}}'`
+  
+  
+ 
+ 
 
 IV. Visual Servoing
    ----------------
@@ -114,8 +134,7 @@ The final set up used in the approach can be seen below and is available for pri
    
    
 
- Results of visual servoing can be observed in a video on a YouTube channel, created specifically for this project:
-[![](http://img.youtube.com/vi/l2s1D08dkuQ/0.jpg)](http://www.youtube.com/watch?v=l2s1D08dkuQ "")
+ 
 
 V. Speed Control!
 ------------------
