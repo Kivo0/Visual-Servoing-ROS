@@ -64,35 +64,7 @@ III. Turtlebot Navigation
 <p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/overview_tf.png" width="800" ></p>
 
  
-•	Odometry source: This gives robot position with respect to its initial position eg via wheel encoders. The odom publishes to the Navigation stack, with message type nav_msgs/ Odometry.
 
-•	Sensor source: In navigation sensors are used for localizing the robot in the map (via kinect) and also to detect the obstacles in the path of the robot.
-
-•	 Sensor transforms/tf: Data captured by the various sensors must be referenced to a common frame of reference (usually the base_link) for comparison with data coming from different sensors. The robot should publish the relationship between the main robot coordinate frame and the different sensors' frames using ROS transforms.
-
-•	Base_controller: It is to convert the output of the Navigation stack, which is a Twist (geometry_msgs/Twist) message, into corresponding motor velocities for the robot.
-
-#### Move_base node
-Function of this node from navigation stack is to move a robot from its present position to a designated (goal) position. This node is responsible for linking the global planner and the local planner for path planning, connecting to rotate recovery package if the robot is stuck in some obstacle, and connecting global costmap and local costmap for getting the map of obstacles of the environment. 
-
-<p align="center"><img src = "https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/move_base_diagram.png" width="450" ></p>
-
-
-#### Global Planner
-When a new goal is received by the move_base node, this goal is immediately sent to the global planner. Then, the global planner is in charge of calculating a safe path in order to arrive at that goal pose. This path is calculated before the robot start moving, so it will not take into account the readings that the robot sensors are acquiring while moving. For calculating the path the global planner uses the costmap.
-
-#### Costmap
-A costmap is a map that represents places that are safe for the robot to be in a grid of cells. Usually, the values in the costmap are binary, representing either free space or places where the robot would be in collision. Each cell in a costmap has an integer value in the range (0-255). There exist two types of costmaps: global costmap and local costmap.
-The globlal costmap is created from the static map. (The map generated using the gmapping package) .The local costmap is created from the robot’s sensor readings. So the global planner uses the global costmap in order to calculate the path to follow.
-
-#### Global Costmap:
-The global costmap is created from a user-generated static map. In this case the costmap is initialized to match the width, height, and obstacle information provided by the static map. This configuration is normally used in conjunction with a localization system, such as amcl.
-
-#### Local Planner
-After global planner has calculated the path to follow, this path is sent to local planner. The local planner, then, will execute each segment of the global plan. So given a plan to follow and a map, the local planner will deliver velocity commands to move the robot. Contradictory to the global planner, the local planner monitors the odometer and the laser data, and chooses a collision-free local plan for the robot.
-
-#### Local costmap
-Local planner uses the local costmap in order to calculate the local plans. Unlike the global costmap, the local costmap is created directly via robot’s sensor readings.
 
 IV. Visual Servoing
    ----------------
