@@ -3,10 +3,8 @@
 ## Team Members: MIKHAILOV Ivan, BOTROS Karim, SAEED Hassan
 
 [![botros karim](https://s.gravatar.com/avatar/5149755ee69696f33d24c159cf243363?s=80)](https://github.com/Kivo0) | [![Ivan Mikhalov ](https://gravatar.com/avatar/48)](https://github.com/ivan)
-
-  ---|---
-
-[botros karim](https://github.com/Kivo0) | [Ivan](https://github.com/ivan) | [Hassan](https://github.com/hassansrs)  
+ ---|---
+ [botros karim](https://github.com/Kivo0) | [Ivan](https://github.com/ivan) | [Hassan](https://github.com/hassansrs)  
 
 
 
