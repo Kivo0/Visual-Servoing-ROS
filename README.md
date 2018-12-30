@@ -165,10 +165,15 @@ Please, note, that the paths used above should be changed to your own, depending
 VII. Task Management
 ---------------------
 
-As we got good results from the begning we thought about trying to get extra credit for creating a way for combining our work with our colleagues work. therefore we have tried many different approaches we have faced some problems:
+As soon as we got agreable results we thought about trying to create a way for combining our work with our colleagues work.To do a complete scenario of a Turtlebot that enters the room localize itself within a predefined map and then searches for the marker that is marked with "loading phase" and then the robot goes to the marker 
+therefore we have tried many different approaches we have faced some problems:
 
 - Conflict between AMCL package and Freenect Package 
 - ROS must Recieve the ODEM of the ROBOT before running the Navigation part
+
+sol:
+first we tried to modify the packages AMCL and FReenect because they need some parameters to be set for the kinect and they have conflicts in these parameters. so we thought about changing these parameters online at the time of operation ... to be continued
+
 
 
 ## LICENSE
