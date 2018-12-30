@@ -38,7 +38,7 @@ VI. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#vi-
 
 VII. [Task Management](https://github.com/Kivo0/Visual-Servoing-ROS#vii-Task-Management)
 
-VIII. [LICENSE](https://github.com/Kivo0/Visual-Servoing-ROS#viii-LICENSE)
+VIII. [LICENSE](https://github.com/Kivo0/Visual-Servoing-ROS#LICENSE)
 
 
 I. Project Description
