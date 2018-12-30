@@ -36,7 +36,10 @@ V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-speed-control
 
 VI. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#vi-Basic-Commands)
 
-VII. [Task Management]
+VII. [Task Management](https://github.com/Kivo0/Visual-Servoing-ROS#vii-Task-Management)
+
+VIII. [LICENSE](https://github.com/Kivo0/Visual-Servoing-ROS#viii-LICENSE)
+
 
 I. Project Description
    -------------------
