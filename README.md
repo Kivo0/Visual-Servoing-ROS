@@ -167,8 +167,8 @@ VII. Task Management
 
 As we got good results from the begning we thought about trying to get extra credit for creating a way for combining our work with our colleagues work. therefore we have tried many different approaches we have faced some problems:
 
--- Conflict between AMCL package and Freenect Package 
--- ROS must Recieve the ODEM of the ROBOT before running the Navigation part
+- Conflict between AMCL package and Freenect Package 
+- ROS must Recieve the ODEM of the ROBOT before running the Navigation part
 
 
 ## LICENSE
