@@ -170,19 +170,19 @@ VII. Task Management                       [![MIT LICENSE](https://github.com/Ki
 
 As soon as we got agreable results we thought about trying to create a way for combining our work with our colleagues work.To do a complete scenario of a Turtlebot that enters the room localize itself within a predefined map and then searches for the marker that is marked with "loading phase" and then the robot goes to the marker after arrival to the first marker the robotic arm puts a cube on the turtlebot and then the turtlebot goes to the next marker "unloading marker" to unload the cube, once the turtlebot arrives to the second marker the robotic arm takes the cube from the robot and put it on the station.
 
-therefore we have tried many different approaches to create a way to combine our work with our colleagues work, so we have faced some problems:grey_exclamation:   :  
+therefore we have tried many different approaches to create a way to combine our work with our colleagues work, so we have faced some problems:  
 
 - Conflict between AMCL package and Freenect Package:grey_exclamation:
 - ROS must Recieve the ODEM of the ROBOT before running the Navigation part:grey_exclamation:
 
 
 
-Solution
---------
+ Solution
+  --------
 
 First we tried to modify the packages such as : AMCL and FReenect because they need some parameters to be set for the kinect sensor and both packages need the same parameter to be either false for amcl or true for freenect to work, so they have conflicts in these parameters. so we thought about changing these parameters online at the time of operation, second thought this was not a good option to change it in real time. so we had to run and kill the operations manually and set the parameters of the kinect sensor again to fit with the freenect package. this was not good enough. so we kept searching for a solution till we found that we can control the commands inside the terminal using **bash** as we get help from **MARC Blanchon** he provided us with the Resources on how to program on terminal we digged into these resources and then we created our terminal command Sequencer using old language called *TCL* this command is called from the terminal.sh in the source folder calls a file called **Terminal_Control** in this file we have combined the 2 packages the freenect and the amcl. and also we solved the error of not waiting for the odem to be recieved by ros in that file too. and in our task management any code from our colleagues can be added and sequenced using our management tool.
 
-email: Karim or IVAN for the management tool!
+email: Karim or Ivan for the management tool!
 
 Best of luck :bowtie:
 
