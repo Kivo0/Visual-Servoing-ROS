@@ -120,7 +120,7 @@ This solution drastically improves **precision and detection uptime** (uptime is
 The final set up used in the approach can be seen below and is available for printing in the original size:
 <p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="250"></p>
    
-   #### Searching for Target!
+   #### Searching for Target:exclamation:
    first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
    
    #### Attacking the Target
@@ -133,7 +133,7 @@ The final set up used in the approach can be seen below and is available for pri
 Results of visual servoing can be observed in a video on a YouTube channel, created specifically for this project:
 [![](http://img.youtube.com/vi/l2s1D08dkuQ/0.jpg)](http://www.youtube.com/watch?v=l2s1D08dkuQ "") 
 
-V. Speed Control!
+V. Speed Control:exclamation:
 ------------------
 
 it is hard task to achieve the same gap distance between the robot and the marker! that is because the robot increases its speed linearly to achieve the target therefore if the initial distance is close to the target distance the initial speed will be low and the robot will not be close to the target at the end. and also if the robot is far away the initial speed will be high and the robot might hit the marker. therefore we had to apply control to this linear model. **note: "this model can be modeled with the non linearities such as the friction of the kabuki base wheels with the ground and weight changes on the robot and many other factors but we neglected these factors to make the system linear"**. so we get the current speed of the robot and apply the control equation and feed the new speed to the motors. Feedback PID speed Control.
@@ -172,8 +172,8 @@ As soon as we got agreable results we thought about trying to create a way for c
 
 therefore we have tried many different approaches to create a way to combine our work with our colleagues work, so we have faced some problems:  
 
-- Conflict between AMCL package and Freenect Package:red_exclamation:
-- ROS must Recieve the ODEM of the ROBOT before running the Navigation part:red_exclamation:
+- Conflict between AMCL package and Freenect Package:exclamation:
+- ROS must Recieve the ODEM of the ROBOT before running the Navigation part:exclamation:
 
 
 
