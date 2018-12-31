@@ -172,8 +172,8 @@ As soon as we got agreable results we thought about trying to create a way for c
 
 therefore we have tried many different approaches to create a way to combine our work with our colleagues work, so we have faced some problems:  
 
-- Conflict between AMCL package and Freenect Package:grey_exclamation:
-- ROS must Recieve the ODEM of the ROBOT before running the Navigation part:grey_exclamation:
+- Conflict between AMCL package and Freenect Package:red_exclamation:
+- ROS must Recieve the ODEM of the ROBOT before running the Navigation part:red_exclamation:
 
 
 
