@@ -177,7 +177,7 @@ therefore we have tried many different approaches we have faced some problems:
 
 
 Solution
-* * * *
+***
 first we tried to modify the packages AMCL and FReenect because they need some parameters to be set for the kinect sensor and they have conflicts in these parameters. so we thought about changing these parameters online at the time of operation, second thought this was not a good option to change it in real time. 
 
 
