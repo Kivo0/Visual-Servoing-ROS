@@ -165,7 +165,7 @@ For this purpose it is easy enough to update the whole project folder as followe
 Please, note, that the paths used above should be changed to your own, depending on your system paths.
 
     
-VII. Task Management     /tab  [![MIT LICENSE](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/bash-150x25.png?raw=true)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/rbx2_ar_tags/terminal.sh)
+VII. Task Management  - - - -  [![MIT LICENSE](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/bash-150x25.png?raw=true)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/rbx2_ar_tags/terminal.sh)
 ---------------------
 
 As soon as we got agreable results we thought about trying to create a way for combining our work with our colleagues work.To do a complete scenario of a Turtlebot that enters the room localize itself within a predefined map and then searches for the marker that is marked with "loading phase" and then the robot goes to the marker 
