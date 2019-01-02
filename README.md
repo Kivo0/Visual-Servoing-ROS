@@ -86,7 +86,7 @@ Results of navigation can be observed in a video on a YouTube channel, created s
   
 IV. Visual Servoing
    ----------------
-   #### Markers!
+   #### Markers:grey_exclamation:
    
    For the purpose of Fine Positioning we used Alvar for ROS as our main library (http://wiki.ros.org/ar_track_alvar). The reasons why Alvar was chosen are mentioned in the ROS survey written by our team and included in this repository. Nevertheless, the main idea is to use AR tags as an artificial marking on the target, which needs to be approached by a robot.
    
@@ -120,23 +120,25 @@ This solution drastically improves **precision and detection uptime** (uptime is
 The final set up used in the approach can be seen below and is available for printing in the original size:
 <p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="250"></p>
    
-   #### Searching for Target:exclamation:
+   #### Searching for Target:grey_exclamation:
    first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
    
-   #### Attacking the Target
+   #### Attacking the Target:grey_exclamation:
    
    there is many ways to do to arrive at the target **"All roads leads to Maker" by Botros, Karim .. myself!**,  initially the alvar library can't center the robot or align it perpendicular to the target if the robot was already near at the begining of the servoing algorithm to the marker so we thought of using **yaw** a component of Quaternions number system which indicates the perpendicularity of the marker plane with the kinect plane. there are other components in Quaternions but we are only interested in yaw for now, after many attempts and experiments recordings we achieved our task of making the robot perpindcular to the surface of the marker
    
-   #### Parking "Centering the robot to the center of the marker"
+   #### Parking "Centering the robot to the center of the marker":grey_exclamation:
    
 
 Results of visual servoing can be observed in a video on a YouTube channel, created specifically for this project:
 [![](http://img.youtube.com/vi/l2s1D08dkuQ/0.jpg)](http://www.youtube.com/watch?v=l2s1D08dkuQ "") 
 
-V. Speed Control:exclamation:
+V. Speed Control:grey_exclamation:
 ------------------
 
 it is hard task to achieve the same gap distance between the robot and the marker! that is because the robot increases its speed linearly to achieve the target therefore if the initial distance is close to the target distance the initial speed will be low and the robot will not be close to the target at the end. and also if the robot is far away the initial speed will be high and the robot might hit the marker. therefore we had to apply control to this linear model. **note: "this model can be modeled with the non linearities such as the friction of the kabuki base wheels with the ground and weight changes on the robot and many other factors but we neglected these factors to make the system linear"**. so we get the current speed of the robot and apply the control equation and feed the new speed to the motors. Feedback PID speed Control.
+
+
      
 
 
@@ -177,11 +179,11 @@ therefore we have tried many different approaches to create a way to combine our
 
 
 
- ##### Solution
+ #### Solution
  
 First we tried to modify the packages such as : AMCL and FReenect because they need some parameters to be set for the kinect sensor and both packages need the same parameter to be either false for amcl or true for freenect to work, so they have conflicts in these parameters. so we thought about changing these parameters online at the time of operation, second thought this was not a good option to change it in real time. so we had to run and kill the operations manually and set the parameters of the kinect sensor again to fit with the freenect package. this was not good enough. so we kept searching for a solution till we found that we can control the commands inside the terminal using **bash** as we get help from **MARC Blanchon** he provided us with the Resources on how to program on terminal we digged into these resources and then we created our terminal command Sequencer using old language called *TCL* this command is called from the terminal.sh in the source folder calls a file called **Terminal_Control** in this file we have combined the 2 packages the freenect and the amcl. and also we solved the error of not waiting for the odem to be recieved by ros in that file too. and in our task management any code from our colleagues can be added and sequenced using our management tool.
 
-email: Karim or Ivan for the management tool:grey_exclamation:
+email: Karim or Ivan for the management tool:exclamation:
 
 Best of luck :bowtie:
 
