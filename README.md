@@ -174,8 +174,8 @@ As soon as we got agreable results we thought about trying to create a way for c
 
 therefore we have tried many different approaches to create a way to combine our work with our colleagues work, so we have faced some problems:  
 
-- Conflict between AMCL package and Freenect Package:exclamation:
-- ROS must Recieve the ODEM of the ROBOT before running the Navigation part:exclamation:
+- Conflict between AMCL package and Freenect Package:grey_exclamation:
+- ROS must Recieve the ODEM of the ROBOT before running the Navigation part:grey_exclamation:
 
 
 
@@ -185,7 +185,7 @@ First we tried to modify the packages such as : AMCL and FReenect because they n
 
 
 
-<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/Full%20Project%20Schematics.jpg?raw=true" width="250"></p>
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/Full%20Project%20Schematics.jpg?raw=true" width="400"></p>
 
 email: Karim or Ivan for the management tool:exclamation:
 
