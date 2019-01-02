@@ -138,8 +138,10 @@ V. Speed Control:grey_exclamation:
 
 it is hard task to achieve the same gap distance between the robot and the marker! that is because the robot increases its speed linearly to achieve the target therefore if the initial distance is close to the target distance the initial speed will be low and the robot will not be close to the target at the end. and also if the robot is far away the initial speed will be high and the robot might hit the marker. therefore we had to apply control to this linear model. **note: "this model can be modeled with the non linearities such as the friction of the kabuki base wheels with the ground and weight changes on the robot and many other factors but we neglected these factors to make the system linear"**. so we get the current speed of the robot and apply the control equation and feed the new speed to the motors. Feedback PID speed Control.
 
-
+https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/UDiagram.png?raw=true
      
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/UDiagram.png?raw=true
+" width="750"></p>
 
 
 VI. Basic Commands
