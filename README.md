@@ -183,6 +183,10 @@ therefore we have tried many different approaches to create a way to combine our
  
 First we tried to modify the packages such as : AMCL and FReenect because they need some parameters to be set for the kinect sensor and both packages need the same parameter to be either false for amcl or true for freenect to work, so they have conflicts in these parameters. so we thought about changing these parameters online at the time of operation, second thought this was not a good option to change it in real time. so we had to run and kill the operations manually and set the parameters of the kinect sensor again to fit with the freenect package. this was not good enough. so we kept searching for a solution till we found that we can control the commands inside the terminal using **bash** as we get help from **MARC Blanchon** he provided us with the Resources on how to program on terminal we digged into these resources and then we created our terminal command Sequencer using old language called *TCL* this command is called from the terminal.sh in the source folder calls a file called **Terminal_Control** in this file we have combined the 2 packages the freenect and the amcl. and also we solved the error of not waiting for the odem to be recieved by ros in that file too. and in our task management any code from our colleagues can be added and sequenced using our management tool.
 
+
+
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/Full%20Project%20Schematics.jpg?raw=true" width="250"></p>
+
 email: Karim or Ivan for the management tool:exclamation:
 
 Best of luck :bowtie:
