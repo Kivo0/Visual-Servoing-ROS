@@ -140,8 +140,7 @@ it is hard task to achieve the same gap distance between the robot and the marke
 
 https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/UDiagram.png?raw=true
      
-<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/UDiagram.png?raw=true
-" width="750"></p>
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/U2Diagram.png?raw=true" width="750"></p>
 
 
 VI. Basic Commands
