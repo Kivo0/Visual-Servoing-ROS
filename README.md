@@ -185,7 +185,7 @@ First we tried to modify the packages such as : AMCL and FReenect because they n
 
 
 
-<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/Full%20Project%20Schematics.jpg?raw=true" width="400"></p>
+<p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/Full%20Project%20Schematics.jpg?raw=true" width="600"></p>
 
 email: Karim or Ivan for the management tool:exclamation:
 
