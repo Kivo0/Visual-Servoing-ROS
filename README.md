@@ -13,7 +13,7 @@ I. [Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project-
 
 II. [Hardware components](https://github.com/Kivo0/Visual-Servoing-ROS#ii-Hardware-contraints)
 
-III. [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Turtlebot-Navigation)
+III. [Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Turtlebot-Navigation)
      
    * [Ros Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Ros-Navigation)
      
@@ -45,11 +45,20 @@ I. Project Description
    -------------------
 we are addressing the problem of visual servoing of a mobile robot "turtlebot 2" our beloved turlte. the problem is the localization of an indoor mobile robot is never accurate. so in order to achieve an accuracy of few centimeters or even milimeter scale. we need to do visual servoing to reach the target with minimum distance. so in easy words. our robot goes from outside the room to the center of the room using [Turtlebot Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Turtlebot-Navigation)
 
+Final results for the project are recorded on video and can be accessed on YouTube via this link or found in the corresponding sections of the readme: https://www.youtube.com/playlist?list=PLVNJu2rlBCSt2N_Ap0ZALNexSc9nmzhTA
+
+For some "in the making" and sometimes funny videos, you can follow this link:
+https://www.youtube.com/playlist?list=PLVNJu2rlBCSv3iQQz9zZ36cAm_oZM_I4w
+
+Full video of both Navigation and Visual Servoing for Fine Positioning (full seamless robot routine recording) can be found below:
+[![](http://img.youtube.com/vi/R-KB58XCEmo/1.jpg)](http://www.youtube.com/watch?v=R-KB58XCEmo "")
+
+
 II. Hardware components
    -------------------
 The project is based on **ROS** (Robot Operating System) environment running the eighth ROS distribution release named **indigo** and a **TurtleBot2** as a robot. Turtlebot2 includes YUJIN Kobuki base, a 2200 mAh battery pack, a **KinectV1** sensor, and an Asus 1215N laptop with a dual core processor. The system is run through a stationary PC, connected to the TurtleBot, and running  **Ubuntu 14.04 LTS**.
 
-III. Turtlebot Navigation
+III. Navigation
    ---------------------
 #### Ros Navigation
  Navigation Stack takes in current location of the robot, the goal pose, the Odometry data of Robot (wheel encoders etc) and data from a sensor as an input, and outputs the necessary velocity commands and forward them to the mobile base in order to move the robot to the designated goal:
