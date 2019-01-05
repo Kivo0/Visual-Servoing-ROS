@@ -50,7 +50,8 @@ Final results for the project are recorded on video and can be accessed on YouTu
 For some "in the making" and sometimes funny videos, you can follow this link:
 https://www.youtube.com/playlist?list=PLVNJu2rlBCSv3iQQz9zZ36cAm_oZM_I4w
 
-Full video of both Navigation and Visual Servoing for Fine Positioning (full seamless robot routine recording) can be found below:
+Full video of both Navigation and Visual Servoing for Fine Positioning (full seamless routine recording):
+
 [![](http://img.youtube.com/vi/R-KB58XCEmo/0.jpg)](http://www.youtube.com/watch?v=R-KB58XCEmo "")
 
 
