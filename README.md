@@ -197,7 +197,7 @@ First we tried to modify the packages such as : AMCL and FReenect because they n
 
 <p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/Full%20Project%20Schematics.jpg?raw=true" width="750"></p>
 
-email: Karim or Ivan for the management tool:exclamation:
+email: [Karim](emailto:kim0.swimmer@gmail.com) or [Ivan]() for the management tool:exclamation:
 
 Best of luck :bowtie:
 
