@@ -91,7 +91,7 @@ III. Navigation
   
 While navigating problems incurred were related to collision with the edge of the room while turtlebot moves towards its goal, also sometimes due to speed turtlebot was not able to keep up on its original planned trajectory due to which it will stop moving. These problems can be solved by tuning parameters in navigation package. For details, on tuning turtlebot navigation package, please refer to this document: http://kaiyuzheng.me/documents/navguide.pdf
 
-Results of navigation can be observed in a video on a YouTube channel, created specifically for this project:
+Results of navigation separately can be observed in a video on a YouTube channel, created specifically for this project:
 [![](http://img.youtube.com/vi/Kis-Ex1mv2Y/0.jpg)](http://www.youtube.com/watch?v=Kis-Ex1mv2Y "")
   
 IV. Visual Servoing
@@ -131,16 +131,24 @@ The final set up used in the approach can be seen below and is available for pri
 <p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="250"></p>
    
    #### Searching for Target:grey_exclamation:
-   first part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials >>>link here<<<<<<< 
+   First part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials. >>>link here<<<<<<< 
    
    #### Attacking the Target:grey_exclamation:
-   
-   there is many ways to do to arrive at the target **"All roads leads to Maker" by Botros, Karim .. myself!**,  initially the alvar library can't center the robot or align it perpendicular to the target if the robot was already near at the begining of the servoing algorithm to the marker so we thought of using **yaw** a component of euler angles which is computed from Quaternions number system which indicates the perpendicularity of the marker plane with the kinect plane. there are other components in euler angles ex: roll,pitch but we are only interested in yaw for now, after many attempts and experiments recordings we achieved our task of making the robot perpindcular to the surface of the marker
+   There are many ways to do to arrive at the target **"All roads leads to Maker" by Botros, Karim .. myself!**,  initially the alvar library can't center the robot or align it perpendicular to the target if the robot was already near at the begining of the servoing algorithm to the marker so we thought of using **yaw** a component of euler angles which is computed from Quaternions number system which indicates the perpendicularity of the marker plane with the kinect plane. there are other components in euler angles ex: roll,pitch but we are only interested in yaw for now, after many attempts and experiments recordings we achieved our task of making the robot perpindcular to the surface of the marker.
    
    #### Parking "Centering the robot to the center of the marker":grey_exclamation:
+   After achieving perpendicularity, there can be an issue, when robot is misplaced to from the target on the y axis. It means, that now he is perpendicular to the surface the AR tag is placed on, but he is to the left or right of the marker itself, so he still has an angle to the marker's surface if measured absolutely i.e robot is not directly in front of the marker. This issue can happen sometimes, when the robot approaches the target from an angle, and though not essentially critical due to the fact that the displacement is relatively slow, we decided to introduce the method which will fix such potential issues, improve the precision of the algorithm overall and increase the stability of the robot's performance, making his final position range even more predictable and constant.
    
+   For this purpose we introduced simple, but effective solution, which will work automatically if the aforementioned situation takes place. The algorithm is executed as follows:
+- The robot detects the direction it came from using the "yaw" parameter i.e if he approached target from the "left" or "right"
+- Afterwards, he makes himself perpendicular **to the surface** to which the AR tag is attached as described in the previous chapter
+- To position him in front **of the AR tag itself** he first turns until he is parallel to the tag
+- Then, he moves linearly while being parallel to the tag in the direction opposite to the one he came from
+- At last, he realigns himself perpendicularly to the tag again, being more centered on the center of the tag
 
-Results of visual servoing can be observed in a video on a YouTube channel, created specifically for this project:
+It is important to notice, that "the direction the robot comes from" detected in the first step, is a generalization. Everything to the right of the center of the target will be "from the right" and everything left will be "from the left". In other words, the angles may wary, but the response will be the same. Therefore, when it is said that the robots is moving in parallel in the opposite direction from which he came as described in the last step, it just means that he moves straight in parallel to the right of the tag if he came from the left and vice versa, not at a certain angle to the tag. 
+   
+Results of visual servoing part separately can be observed in a video on a YouTube channel, created specifically for this project:
 [![](http://img.youtube.com/vi/l2s1D08dkuQ/0.jpg)](http://www.youtube.com/watch?v=l2s1D08dkuQ "") 
 
 V. Speed Control:grey_exclamation:
