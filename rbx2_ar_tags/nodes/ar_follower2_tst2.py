@@ -119,7 +119,7 @@ class ARFollower():
 
 		rospy.loginfo("Marker messages detected. Starting follower...but hassan didn't come yet.")
         
-        # Begin the cmd_vel publishing loop
+       	    # Begin the cmd_vel publishing loop
 		while not rospy.is_shutdown():
             # Send the Twist command to the robot
 			self.cmd_vel_pub.publish(self.move_cmd)
@@ -138,9 +138,7 @@ class ARFollower():
 		global TargetFlag
 		global MappingFlag
 		global marker_id
-		#counter = 0
-		#status = msg.status
-		#rospy.loginfo("STATUS HERE:%s",status)
+		
 		try:
 			
 			marker = msg.markers[0] #save the marker into variable
@@ -171,7 +169,7 @@ class ARFollower():
 			if self.target_visible:
 				rospy.loginfo("FOLLOWER LOST Target!")
 				self.target_visible = False
-		        #counter+=1
+		        
 			return
                     
         
@@ -238,7 +236,10 @@ class ARFollower():
 				rospy.loginfo("the current speed is : %f",cspeed)
 				if((target_offset_x <= 0.8 ) and (target_offset_x >= 0.4) and (cspeed <= 0.1)):#0.8 0.05 0.1, respectively
 					self.move_cmd.linear.x = cspeed*e**(0.43)-cspeed*e**(cspeed)+0.08 # 0.4 worked cspeed*0.1+0.16
-
+					#this if statement is to compensate the variant difference of distance between the robot and the marker
+					#in other words this if statement is responsible for the control part 
+					#model is linear modeled as v*e^c-v*e^(v)+c2
+					
 					rospy.loginfo("increasing Speed \n")
 					self.sm_markerFlag=True
 				elif(self.sm_markerFlag==True):
@@ -256,22 +257,22 @@ class ARFollower():
 					
 					if(yaw>0.8 and yaw<1.7 and self.AlignedZeroFlag==False): #from 0.8 to 1.4
 						#right blind alignment
-						self.move_cmd.angular.z = -0.2
+						self.move_cmd.angular.z = -0.2 
 						rospy.loginfo("target aligning -- Z turning right\n")
-					       	self.rightFlag=True
+					       	self.rightFlag=True #setting the right flag to TRUE
 
 					elif(yaw>-1.6 and yaw <=-1.4 and self.AlignedZeroFlag==False):# from -1.7 to -1.4
 						#center
 						self.move_cmd.angular.z = 0.0
 						rospy.loginfo("target aligned\n")
-						csOFZ=self.move_cmd.angular.z
-						self.AlignedZeroFlag=True
+						csOFZ=self.move_cmd.angular.z #current angular speed 
+						self.AlignedZeroFlag=True #robot is aligned
 
 					elif(yaw<-0.8 and yaw > -1.7 and self.AlignedZeroFlag==False):# from -0.8 to -1.4
 						#left alignment
 						self.move_cmd.angular.z = 0.2
 						rospy.loginfo("target aligning ++ Z turning left \n")
-						self.leftFlag=True
+						self.leftFlag=True #robot is coming from left, flag is set to true
 
 
 		if (self.rightFlag==True and self.AlignedZeroFlag==True):
