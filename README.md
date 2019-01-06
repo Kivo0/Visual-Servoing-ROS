@@ -131,7 +131,9 @@ The final set up used in the approach can be seen below and is available for pri
 <p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/MarkerData_5_15_and_5.png" width="250"></p>
    
    #### Searching for Target:grey_exclamation:
-   First part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials. >>>link here<<<<<<< 
+   First part of the alogrithm after the robot arrives near the ***"marker"*** the search phase begins which is the first phase of our algorithm, its completed directly after the **first mapping and localization phase ends** = "letting the turtlebot localize itself and go near to the loading marker to load the goods". the search is done by rotating the robot continously more than 360&deg; untill it detects our marker then it attacks the marker and kills it! please see our failed trials.
+  [![ninja turtles](http://img.youtube.com/vi/juJFVpWJCmA/0.jpg)](http://www.youtube.com/watch?v=juJFVpWJCmA "Failed trial")
+
    
    #### Attacking the Target:grey_exclamation:
    There are many ways to do to arrive at the target **"All roads leads to Maker" by Botros, Karim .. myself!**,  Initially the alvar library can't center the robot or align it perpendicular to the target if the robot was already near at the begining of the servoing algorithm to the marker. So we thought of using the **yaw** a component of Euler angles which is computed from Quaternions number system which indicates the perpendicularity of the marker plane with the kinect plane. there are other components in Euler angles ex: Roll,Pitch but we are only interested in yaw for now, After many attempts and experiments recordings we achieved our task of making the robot perpindcular to the surface of the Marker.
