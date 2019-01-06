@@ -197,10 +197,10 @@ First we tried to modify the packages such as : AMCL and FReenect because they n
 
 <p align="center"><img src="https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/images/Full%20Project%20Schematics.jpg?raw=true" width="750"></p>
 
-email:<a href="mailto:kim0.swimmer@gmail.com?Subject=Management%20Tool" target="_top">Karim</a>
+Email:  <a href="mailto:kim0.swimmer@gmail.com?Subject=Management%20Tool" target="_top">Karim</a>
  or <a href="mailto:sleepingfires@gmail.com?Subject=Management%20Tool" target="_top">Ivan</a> for the management tool:exclamation:
 
-Best of luck :bowtie:
+### Best of luck :bowtie:
 
 
 
