@@ -11,9 +11,9 @@
 
 I. [Project Description](https://github.com/Kivo0/Visual-Servoing-ROS#i-Project-Description)
 
-II. [Hardware components](https://github.com/Kivo0/Visual-Servoing-ROS#ii-Hardware-contraints)
+II. [Hardware components](https://github.com/Kivo0/Visual-Servoing-ROS#ii-Hardware-Components)
 
-III. [Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Turtlebot-Navigation)
+III. [Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Navigation)
      
    * [Ros Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#Ros-Navigation)
      
@@ -55,12 +55,12 @@ Full video of both Navigation and Visual Servoing for Fine Positioning (full sea
 [![](http://img.youtube.com/vi/R-KB58XCEmo/0.jpg)](http://www.youtube.com/watch?v=R-KB58XCEmo "")
 
 
-II. Hardware components
+II. Hardware Components
    -------------------
 The project is based on **ROS** (Robot Operating System) environment running the eighth ROS distribution release named **indigo** and a **TurtleBot2** as a robot. Turtlebot2 includes YUJIN Kobuki base, a 2200 mAh battery pack, a **KinectV1** sensor, and an Asus 1215N laptop with a dual core processor. The system is run through a stationary PC, connected to the TurtleBot, and running  **Ubuntu 14.04 LTS**.
 
 III. Navigation
-   ---------------------
+   ------------
 #### Ros Navigation
  Navigation Stack takes in current location of the robot, the goal pose, the Odometry data of Robot (wheel encoders etc) and data from a sensor as an input, and outputs the necessary velocity commands and forward them to the mobile base in order to move the robot to the designated goal:
 
