@@ -138,8 +138,17 @@ class ARFollower():
 		global TargetFlag
 		global MappingFlag
 		global marker_id
-		
+		#Various flags, enabling disabling certain control statements and behaviours, depending on the state of the robot and the goal
 		try:
+		#Try and catch block loops (or activates) for each change of the msg.markers[0]. 
+		#Therefore, it's close to an endless loop while the visual signal is coming in, and alvar is working. 
+		#To control this behaviour, but keep the loop working due to the fact that we want to access each frame and use its data
+		#for servoing, multiple flags are introduced to stop the algorithm from reaching previous commands (instructions), 
+		#which are not longer necessary.
+		#When the new state of the robot is reached e.g., when he got closer to the target, some flag will go up and prohibit him, 
+		#when the try and catch will be visited again, to perform searching for target, or, for example, rapid turning,
+		#to avoid strong motions or unnecessary turning. So, at each step previous instructions are blocked from being visited by
+		# the looping and new ones are introduced.
 			
 			marker = msg.markers[0] #save the marker into variable
 			self.marker_id = msg.markers[0].id #get the first detected marker
@@ -149,24 +158,24 @@ class ARFollower():
 		        #rospy.loginfo("The MARKER ID is:%i\n",marker_id) #printing markers
 		   
 		   
-			if ((not self.target_visible) and (self.marker_id==5)):
+			if ((not self.target_visible) and (self.marker_id==5)):#If target is visible and the marker id is 5
 
-				rospy.loginfo("FOLLOWER is Tracking Target!")
+				rospy.loginfo("FOLLOWER is Tracking Target!")#Output in terminal
 		        
-				self.move_cmd.angular.z = 0.0
-				self.target_visible = True
+				self.move_cmd.angular.z = 0.0 #Stop searching (spinning)
+				self.target_visible = True #Change the state of the flag based on visibility of the tag. Now visible.
 		except:
 			# If target is lost, stop the robot by slowing it incrementally
 			self.move_cmd.linear.x /= 1.4 #1.9
 			if ((self.TargetFlag is not True) and (self.marker_id !=5) and (self.stopSearchingTargetLostFlag==False)):
-				self.move_cmd.angular.z = 0.6 #1.08  , 0.9
-			elif(self.sm_markerFlag == False):
+				self.move_cmd.angular.z = 0.6 #Spinning for the purpose of searching, possible values : 1.08, 0.9
+			elif(self.sm_markerFlag == False):# Complete linear stop
 				self.move_cmd.linear.y = 0.0
 				self.move_cmd.linear.z = 0.0
 				self.move_cmd.linear.x = 0.0
 				#self.move_cmd.angular.z= 0.0
 		    
-			if self.target_visible:
+			if self.target_visible:# If target is lost
 				rospy.loginfo("FOLLOWER LOST Target!")
 				self.target_visible = False 
 		        
@@ -186,12 +195,12 @@ class ARFollower():
 		euler = tf.transformations.euler_from_quaternion(quaternion)
 		roll = euler[0]
 		pitch = euler[1]
-		yaw = euler[2] # these are the quaternion we only need the yaw, to make the robot perpindecular with the surface of the marker
+		yaw = euler[2] # these are the quaternions transormed to euler angles -  we only need the yaw, to make the robot perpindecular with the surface of the marker
 		
 
 		#rospy.loginfo("the Roll is: %f",roll)
 		#rospy.loginfo("the Pitch is: %f",pitch)
-		rospy.loginfo("the yaw is: %f",yaw)
+		rospy.loginfo("the yaw is: %f",yaw)#Output yaw value
 
 
 
@@ -204,7 +213,7 @@ class ARFollower():
 		# Get the distance of the marker from the base
 		target_offset_z = marker.pose.pose.position.z
 
-		rospy.loginfo("the target_offset_x is: %f",target_offset_x)
+		rospy.loginfo("the target_offset_x is: %f",target_offset_x)# Output the value of distance to the tag
 		#rospy.loginfo("the target_offset_y is: %f",target_offset_y)
 		#rospy.loginfo("the target_offset_z is: %f",target_offset_z)
 
@@ -281,12 +290,12 @@ class ARFollower():
 		elif(self.leftFlag==True and self.AlignedZeroFlag==True): #start of blind parking when the robot comes from the left side 
 			rospy.loginfo("WE CAME FROM THE LEFT\n")
 			self.stopSearchingTargetLostFlag=True
-			if ((self.stopspinning==False) and (target_offset_x<=1.9)):
+			if ((self.stopspinning==False) and (target_offset_x<=1.9)):#Based on distance to the tag estimated by alvar.
 				self.move_cmd.angular.z = -0.35
 			if (self.marker_id !=5):#((self.target_visible == False) and (self.marker_id !=5)):
 				self.stopspinning=True
 				self.move_cmd.angular.z /= 1.05 #lowering the angular speed
-				rospy.loginfo("I LOST THIS TARGET ON PURPOSE  and (hassan doesn't know why)!:3\n") #robot lost target on purpose for blind parking.				
+				rospy.loginfo("I LOST THIS TARGET ON PURPOSE  and (hassan doesn't know why)!:3\n") #robot lost target on purpose for blind parking (see readme, centering on the center of the tag).				
 
 
 
@@ -297,7 +306,7 @@ class ARFollower():
                  			#	rospy.loginfo("Parking\n")
 		#elif((self.TargetFlag is not True) and ((self.marker_id != 5 ) or (self.marker_id2!= 5 ))  and ((self.marker_id2 != 12) or (self.marker_id != 12))):
 		elif((self.TargetFlag is not True) and (self.marker_id != 5 ) and (self.stopSearchingTargetLostFlag==False) and (self.stopspinning==False)):
-			self.move_cmd.angular.z = 0.5 #1.08 #0.6
+			self.move_cmd.angular.z = 0.5 #Enable spinning for the search if lost. Possible values: 1.08 #0.6
             
                 
                 	
