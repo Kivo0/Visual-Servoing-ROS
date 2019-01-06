@@ -22,11 +22,11 @@ III. [Navigation](https://github.com/Kivo0/Visual-Servoing-ROS#iii-Navigation)
 
 
 IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Servoing)
-   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#markers)
+   * [Markers!](https://github.com/Kivo0/Visual-Servoing-ROS#markersgrey_exclamation)
      
-   * [Searching for Target!](https://github.com/Kivo0/Visual-Servoing-ROS#Searching-for-Target!)
+   * [Searching for Target!](https://github.com/Kivo0/Visual-Servoing-ROS#Searching-for-Targetgrey_exclamation)
     
-   * [Attacking the Target](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Target)
+   * [Attacking the Target](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Targetgrey_exclamation)
    
    * [Parking "Centering the robot to the center of the marker" ](https://github.com/Kivo0/Visual-Servoing-ROS#parking-centering-the-robot-to-the-center-of-the-marker)
    
