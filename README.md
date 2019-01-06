@@ -216,7 +216,6 @@ Email:  <a href="mailto:kim0.swimmer@gmail.com?Subject=Management%20Tool" target
 
 
 
-## LICENSE
 
 [![MIT LICENSE](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/Kivo0/Visual-Servoing-ROS/blob/master/LICENSE)
 
