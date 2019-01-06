@@ -135,7 +135,7 @@ The final set up used in the approach can be seen below and is available for pri
    
    #### Attacking the Target:grey_exclamation:
    
-   there is many ways to do to arrive at the target **"All roads leads to Maker" by Botros, Karim .. myself!**,  initially the alvar library can't center the robot or align it perpendicular to the target if the robot was already near at the begining of the servoing algorithm to the marker so we thought of using **yaw** a component of Quaternions number system which indicates the perpendicularity of the marker plane with the kinect plane. there are other components in Quaternions but we are only interested in yaw for now, after many attempts and experiments recordings we achieved our task of making the robot perpindcular to the surface of the marker
+   there is many ways to do to arrive at the target **"All roads leads to Maker" by Botros, Karim .. myself!**,  initially the alvar library can't center the robot or align it perpendicular to the target if the robot was already near at the begining of the servoing algorithm to the marker so we thought of using **yaw** a component of euler angles which is computed from Quaternions number system which indicates the perpendicularity of the marker plane with the kinect plane. there are other components in euler angles ex: roll,pitch but we are only interested in yaw for now, after many attempts and experiments recordings we achieved our task of making the robot perpindcular to the surface of the marker
    
    #### Parking "Centering the robot to the center of the marker":grey_exclamation:
    
