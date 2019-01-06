@@ -31,7 +31,7 @@ from actionlib_msgs.msg import GoalStatusArray
 from math import copysign
 import time
 import tf
-from math import e
+from math import e # importing exp for control purposes 
 
 class ARFollower():
     #global counter
@@ -95,19 +95,18 @@ class ARFollower():
 
 
 		# Set flag to indicate when the AR marker is visible
-		self.target_visible = False
-		self.TargetFlag	 = False
-		self.MappingFlag = False
-		self.marker_id = 0
-		self.marker_id2 = 0
-		self.sm_markerFlag = False
-		self.rightFlag = False
-		self.leftFlag = False
-		self.AlignedZeroFlag = False
-		self.stopSearchingTargetLostFlag=False
-		self.stopspinning=False
-		# Wait for the ar_pose_marker topic to become available
-		rospy.loginfo("Waiting for ar_pose_marker topic...(notHassan)")
+		self.target_visible = False  #flag to show if the marker is in vision for the kinect or not	
+		self.TargetFlag	 = False #flag for indicating if the target have been spotted once or not at all
+		self.MappingFlag = False # initial tag was aimed for recieving the flag from other groups! to initilize the visual servoing
+		self.marker_id = 0  # initializing marker ID to zero ,, since we don't use tag number zero
+		self.marker_id2 = 0 # initialize second marker id to zero.
+		self.sm_markerFlag = False #flag to let the robot continue motion if target is lost 
+		self.rightFlag = False # flag to show if the robot comeing to the marker from the right side
+		self.leftFlag = False # flag to show if the robot comeing to the marker from the left side
+		self.AlignedZeroFlag = False #flag to show if the robot aligned 90 degree to the marker 
+		self.stopSearchingTargetLostFlag=False  #flag to stop the searching process when we lose the target on purpose for alignment
+		self.stopspinning=False #similar to stopSearchingTargetLostFlag but for another part of the code,, we made two flags to keep it flexable
+		rospy.loginfo("Waiting for ar_pose_marker topic...(notHassan....not hassan....Hassan is not here !)")
 		#rospy.wait_for_message('move_base', String)
 		#rospy.Subscriber('move_base', String, self.set_cmd_vel)
 		rospy.wait_for_message('ar_pose_marker', AlvarMarkers)
@@ -118,7 +117,7 @@ class ARFollower():
 		rospy.Subscriber('ar_pose_marker', AlvarMarkers, self.set_cmd_vel)
 		#rospy.Subscriber('move_base', GoalStatusArray, self.set_cmd_vel)
 
-		rospy.loginfo("Marker messages detected. Starting follower...")
+		rospy.loginfo("Marker messages detected. Starting follower...but hassan didn't come yet.")
         
         # Begin the cmd_vel publishing loop
 		while not rospy.is_shutdown():
@@ -144,16 +143,14 @@ class ARFollower():
 		#rospy.loginfo("STATUS HERE:%s",status)
 		try:
 			
-			marker = msg.markers[0]
-			self.marker_id = msg.markers[0].id
+			marker = msg.markers[0] #save the marker into variable
+			self.marker_id = msg.markers[0].id #get the first detected marker
 			#self.marker_id2 = msg.markers[1].id
 			rospy.loginfo("ZERO MARKER ID ZERO:%i\n",self.marker_id)
-			#rospy.loginfo("ONE MARKER ID ONE:%i\n",self.marker_id2)
-		        #rospy.loginfo("The MARKER ID is:%i\n",marker_id)
+			#rospy.loginfo("ONE MARKER ID ONE:%i\n",self.marker_id2) #printing markers
+		        #rospy.loginfo("The MARKER ID is:%i\n",marker_id) #printing markers
 		   
-		    # rospy.loginfo("the Roll is: %d",roll)
-		    # rospy.loginfo("the Pitch is: %d",pitch)
-		    # rospy.loginfo("the Roll is: %d",yaw)
+		   
 			if ((not self.target_visible) and (self.marker_id==5)):
 
 				rospy.loginfo("FOLLOWER is Tracking Target!")
@@ -191,7 +188,8 @@ class ARFollower():
 		euler = tf.transformations.euler_from_quaternion(quaternion)
 		roll = euler[0]
 		pitch = euler[1]
-		yaw = euler[2]
+		yaw = euler[2] # these are the quaternion we only need the yaw, to make the robot perpindecular with the surface of the marker
+		
 
 		#rospy.loginfo("the Roll is: %f",roll)
 		#rospy.loginfo("the Pitch is: %f",pitch)
@@ -235,7 +233,7 @@ class ARFollower():
 				rospy.loginfo("NO ELSE AT ALL")
 			else:
 				self.move_cmd.linear.x /= 2 #1.9
-				cspeed =  self.move_cmd.linear.x
+				cspeed =  self.move_cmd.linear.x # we save the current speed here
 				rospy.loginfo("WEEEE GOOOOOT HEEEREEEEEEEE!!!!")
 				rospy.loginfo("the current speed is : %f",cspeed)
 				if((target_offset_x <= 0.8 ) and (target_offset_x >= 0.4) and (cspeed <= 0.1)):#0.8 0.05 0.1, respectively
@@ -250,7 +248,12 @@ class ARFollower():
 					
 					rospy.loginfo("arrived to destination : %r", self.TargetFlag)
 					rospy.loginfo("target achieved\n")
-
+					
+					#the following 3 if statement are for aligning the robot 90 degree to the marker
+					#the first if statement checks if the robot is coming from the right side of the marker
+					#the second if statement checks if the robot is looking 90 degree to the marker
+					#the third if statement checks if the robot is coming from the left side of the marker
+					
 					if(yaw>0.8 and yaw<1.7 and self.AlignedZeroFlag==False): #from 0.8 to 1.4
 						#right blind alignment
 						self.move_cmd.angular.z = -0.2
