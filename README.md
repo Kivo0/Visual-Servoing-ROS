@@ -26,12 +26,12 @@ IV.[Visual Servoing](https://github.com/Kivo0/Visual-Servoing-ROS#iv-Visual-Serv
      
    * [Searching for Target!](https://github.com/Kivo0/Visual-Servoing-ROS#Searching-for-Targetgrey_exclamation)
     
-   * [Attacking the Target](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Targetgrey_exclamation)
+   * [Attacking the Target!](https://github.com/Kivo0/Visual-Servoing-ROS#Attacking-the-Targetgrey_exclamation)
    
    * [Parking "Centering the robot to the center of the marker" ](https://github.com/Kivo0/Visual-Servoing-ROS#parking-centering-the-robot-to-the-center-of-the-marker)
    
 
-V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-speed-control)
+V. [Speed Control!](https://github.com/Kivo0/Visual-Servoing-ROS#v-Speed-Controlgrey_exclamation)
 
 
 VI. [Basic Commands for Launch](https://github.com/Kivo0/Visual-Servoing-ROS#vi-Basic-Commands)
