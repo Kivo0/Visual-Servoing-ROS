@@ -168,7 +168,7 @@ class ARFollower():
 		    
 			if self.target_visible:
 				rospy.loginfo("FOLLOWER LOST Target!")
-				self.target_visible = False
+				self.target_visible = False 
 		        
 			return
                     
@@ -226,13 +226,13 @@ class ARFollower():
 			if ((target_offset_x - self.goal_x) > self.x_threshold and self.sm_markerFlag == False):
 				speed =  abs((self.goal_x - (target_offset_x))) * self.x_scale #target_offset_x +0.2 work on slowing the general speed
 				if speed > 0:
-					speed = 0.3#1.5
+					speed = 0.3#1.5 #giving constant speed for better control of the robot
 				self.move_cmd.linear.x = copysign(min(self.max_linear_speed, max(self.min_linear_speed, abs(speed))), speed)
 				rospy.loginfo("NO ELSE AT ALL")
 			else:
 				self.move_cmd.linear.x /= 2 #1.9
 				cspeed =  self.move_cmd.linear.x # we save the current speed here
-				rospy.loginfo("WEEEE GOOOOOT HEEEREEEEEEEE!!!!")
+				rospy.loginfo("WEEEE GOOOOOT HEEEREEEEEEEE!!!!  (hassan not)")
 				rospy.loginfo("the current speed is : %f",cspeed)
 				if((target_offset_x <= 0.8 ) and (target_offset_x >= 0.4) and (cspeed <= 0.1)):#0.8 0.05 0.1, respectively
 					self.move_cmd.linear.x = cspeed*e**(0.43)-cspeed*e**(cspeed)+0.08 # 0.4 worked cspeed*0.1+0.16
@@ -243,7 +243,7 @@ class ARFollower():
 					rospy.loginfo("increasing Speed \n")
 					self.sm_markerFlag=True
 				elif(self.sm_markerFlag==True):
-					self.move_cmd.linear.x /= 1.5 #0.85
+					self.move_cmd.linear.x /= 1.5 #0.85 #Slowing down the robot
 				# self.move_cmd.linear.y = 0.0
 				# self.move_cmd.linear.z = 0.0
 					
@@ -275,18 +275,18 @@ class ARFollower():
 						self.leftFlag=True #robot is coming from left, flag is set to true
 
 
-		if (self.rightFlag==True and self.AlignedZeroFlag==True):
-			rospy.loginfo("WE CAME FROM THE RIGHT\n")
+		if (self.rightFlag==True and self.AlignedZeroFlag==True):#start of blind parking when the robot comes from the right side 
+			rospy.loginfo("WE CAME FROM THE RIGHT and (Hassan didn't come from home)\n") 
 
-		elif(self.leftFlag==True and self.AlignedZeroFlag==True):
+		elif(self.leftFlag==True and self.AlignedZeroFlag==True): #start of blind parking when the robot comes from the left side 
 			rospy.loginfo("WE CAME FROM THE LEFT\n")
 			self.stopSearchingTargetLostFlag=True
 			if ((self.stopspinning==False) and (target_offset_x<=1.9)):
 				self.move_cmd.angular.z = -0.35
 			if (self.marker_id !=5):#((self.target_visible == False) and (self.marker_id !=5)):
 				self.stopspinning=True
-				self.move_cmd.angular.z /= 1.05
-				rospy.loginfo("I LOST THIS TARGET ON PURPOSE :3\n")					
+				self.move_cmd.angular.z /= 1.05 #lowering the angular speed
+				rospy.loginfo("I LOST THIS TARGET ON PURPOSE  and (hassan doesn't know why)!:3\n") #robot lost target on purpose for blind parking.				
 
 
 
