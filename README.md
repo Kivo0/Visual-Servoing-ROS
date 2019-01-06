@@ -149,6 +149,8 @@ The final set up used in the approach can be seen below and is available for pri
 It is important to notice, that "the direction the robot comes from" detected in the first step, is a generalization. Everything to the right of the center of the target will be "from the right" and everything left will be "from the left". In other words, the angles may wary, but the response will be the same. Therefore, when it is said that the robots is moving in parallel in the opposite direction from which he came as described in the last step, it just means that he moves straight in parallel to the right of the tag if he came from the left and vice versa, not at a certain angle to the tag. 
    
 Results of visual servoing part separately can be observed in a video on a YouTube channel, created specifically for this project:
+
+
 [![](http://img.youtube.com/vi/l2s1D08dkuQ/0.jpg)](http://www.youtube.com/watch?v=l2s1D08dkuQ "") 
 
 V. Speed Control:grey_exclamation:
