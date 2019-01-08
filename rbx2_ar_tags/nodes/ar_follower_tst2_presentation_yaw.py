@@ -286,25 +286,8 @@ class ARFollower():
 
 		if (self.rightFlag==True and self.AlignedZeroFlag==True):#start of blind parking when the robot comes from the right side 
 			rospy.loginfo("WE CAME FROM THE RIGHT and (Hassan didn't come from home)\n") 
-
 		elif(self.leftFlag==True and self.AlignedZeroFlag==True): #start of blind parking when the robot comes from the left side 
 			rospy.loginfo("WE CAME FROM THE LEFT\n")
-			self.stopSearchingTargetLostFlag=True
-			if ((self.stopspinning==False) and (target_offset_x<=1.9)):#Based on distance to the tag estimated by alvar.
-				self.move_cmd.angular.z = -0.35
-			if (self.marker_id !=5):#((self.target_visible == False) and (self.marker_id !=5)):
-				self.stopspinning=True
-				self.move_cmd.angular.z /= 1.05 #lowering the angular speed
-				rospy.loginfo("I LOST THIS TARGET ON PURPOSE  and (hassan doesn't know why)!:3\n") #robot lost target on purpose for blind parking (see readme, centering on the center of the tag).				
-
-
-
-     					#if yaw > 1.5 and yaw < 3:
-                 			#	self.move_cmd.angular.z = 0.2
-														
-                 			#	self.move_cmd.linear.x = -0.01
-                 			#	rospy.loginfo("Parking\n")
-		#elif((self.TargetFlag is not True) and ((self.marker_id != 5 ) or (self.marker_id2!= 5 ))  and ((self.marker_id2 != 12) or (self.marker_id != 12))):
 		elif((self.TargetFlag is not True) and (self.marker_id != 5 ) and (self.stopSearchingTargetLostFlag==False) and (self.stopspinning==False)):
 			self.move_cmd.angular.z = 0.5 #Enable spinning for the search if lost. Possible values: 1.08 #0.6
             
