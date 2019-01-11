@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+set timeout 120
+
+
+spawn ssh turtlebot@192.168.0.100
+expect "password" 
+send "napelturbot\n"
+
+expect "turtlebot@CO-P-ROBOT13"
+
+send "roslaunch rbx2_ar_tags navi_2.launch\n"
+
+
+#send "kill ${rospid}\n"
+
+interact
+
+
+

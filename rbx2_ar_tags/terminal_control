@@ -1,0 +1,42 @@
+#!/usr/bin/expect -f
+set timeout 120
+
+spawn ssh turtlebot@192.168.0.100
+expect "password" 
+send "napelturbot\n"
+
+expect "turtlebot@CO-P-ROBOT13" 
+send "roslaunch rbx2_ar_tags navi_1.launch\n"
+#event add <<spawn>> <Control-shift-t>
+expect "odom received!"
+
+set x "odom received!"
+exec gnome-terminal -e "/home/mscv/terminal_control_nav2" &\
+
+expect "Goal reached"
+send \x03
+
+expect "turtlebot@CO-P-ROBOT13" 
+send "roslaunch rbx2_ar_tags vs_total.launch\n" 
+
+#expect "turtlebot@CO-P-ROBOT13"
+
+#spawn ssh turtlebot@192.168.0.100
+#expect "password" 
+#send "napelturbot\n"
+#expect "turtlebot@CO-P-ROBOT13" 
+#send "roslaunch rbx2_ar_tags navi_2.launch\n"
+
+#expect "Goal reached"
+
+#send "roslaunch rbx2_ar_tags navi_.launch\n"
+#expect "Goal reached"
+#send \x03
+
+#expect "turtlebot@CO-P-ROBOT13:~$"
+#send "roslaunch rbx2_ar_tags vs_master.launch\n"
+#sleep 5
+#send "kill ${rospid}\n"
+
+
+interact
